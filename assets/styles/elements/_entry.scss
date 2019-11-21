@@ -10,8 +10,215 @@
 
   &__footer {
     @include wrap;
-    @include narrow-content;
-    margin-top: $gap;
+    // @include narrow-content;
+    margin-top: $gap-big; // $gap;
+
+    .previous-link {
+      margin-top: $gap-medium;
+    }
+
+    .next-link {
+      float: right;
+    }
   }
 
 }
+
+.post-navigation {
+
+  padding: 2em 0;
+  text-align: left;
+  overflow: hidden;
+
+  a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 1em;
+    border: 1px solid $primary;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      border-color: $primary;
+      background: $primary;
+    }
+  }
+
+}
+
+@media screen and (min-width: $max-width-m) {
+
+	.nav-links {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		padding: 0;
+	}
+
+	.post-navigation {
+
+		.nav-previous,
+		.nav-next {
+			float: left;
+			display: flex;
+			align-items: stretch;
+			width: 48%;
+		}
+
+		.nav-next {
+			float: right;
+			text-align: right;
+		}
+	}
+
+	.nav-previous {
+		padding-bottom: 0;
+	}
+}
+
+.post-navigation {
+
+	.meta-nav {
+		display: block;
+	}
+
+	@media screen and (min-width: 30em) {
+		padding-bottom: 1em;
+	}
+
+	.post-title {
+		font-size: 1rem;
+		font-weight: $bold;
+
+	}
+
+	a:hover .post-title,
+	a:focus .post-title{
+    border-bottom-color: white;
+    border-bottom: 3px solid $primary;
+	}
+
+}
+
+/* Post navigation with thumbnails
+********************************************************/
+
+.thumb-navigation {
+  display: block;
+  margin-top: 2.5rem;
+}
+
+.postnav-thumb-previous {
+  margin-bottom: 1.5rem;
+}
+
+
+
+@media screen and (min-width: 670px) {
+
+  .thumb-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+  .postnav-thumb-previous {
+    margin-bottom: 0;
+  }
+}
+
+.postnav-thumb-previous, .postnav-thumb-next {
+  display: flex;
+  a {
+    text-decoration: none;
+    color: $base-font-color;
+    letter-spacing: -0.05em;
+  }
+  .postnav-thumb-title {
+    font-weight: 600;
+  }
+  img {
+    border-radius: 2%;
+  }
+  .postnav-thumb-previous-img, .postnav-thumb-previous-caption, .postnav-thumb-next-img, .postnav-thumb-next-caption {
+    width: 50%
+  }
+}
+
+@media screen and (min-width: $query__medium) {
+  .postnav-thumb-previous, .postnav-thumb-next {
+    width: 50%;
+  }
+}
+
+.postnav-thumb-previous-caption {
+  align-self: center;
+  padding-left: .75rem;
+  padding-bottom: .5rem;
+}
+
+.postnav-thumb-next-caption {
+  align-self: center;
+  padding-right: .75rem;
+  padding-bottom: .5rem;
+  text-align: right;
+}
+
+
+/* More link
+********************************************************/
+
+#more-link {
+  float: right;
+}
+
+/* Categories, tags, comments
+********************************************************/
+
+.cat-links, .tags-links {
+  display: block;
+  color: $grey-font-color;
+  font-size: .85rem;
+}
+
+.cat-links a {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  // color: #333;
+}
+
+.tags-links a {
+  background: transparent;
+  border-radius:5px;
+  padding: 0 2px 2px 2px;
+  margin: 0;
+  letter-spacing: -0.05em;
+  // color: #333;
+}
+
+#comments {
+  margin-top: $gap-big;
+}
+
+
+/* Plugins: Wordpress Related Posts
+----------------------------------------------- */
+
+.wp_rp_content {
+  margin-top: 40px;
+  a {
+    color: $black;
+  }
+}
+
+#wp_rp_first {max-width: 1000px;}
+
+/* Ad: Pietari-matkaopas
+----------------------------------------------- */
+
+.pietari-matkaopas {
+  margin-top: $gap-big;
+}
+

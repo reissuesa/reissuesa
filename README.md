@@ -1,4 +1,4 @@
-# Aucor Starter
+# Reissuesa
 
 Superior WordPress starter theme with modern build tools by **[Aucor](https://www.aucor.fi)**. 200+ hours of development over 2,5 years to make the greatest starting point for WordPress site.
 
@@ -16,7 +16,7 @@ Superior WordPress starter theme with modern build tools by **[Aucor](https://ww
 
 1. [Directory structure](#1-directory-structure)
 2. [Setup](#2-setup)
-    1. [Install Aucor Starter](#21-install-aucor-starter)
+    1. [Install Reissuesa](#21-install-aucor-starter)
     2. [Install Aucor Core](#23-install-aucor-core)
     2. [Install build tools](#23-install-build-tools)
     3. [Start working](#24-start-working)
@@ -73,7 +73,7 @@ Directory structure was once based a mixture between [_underscores](http://under
 
 ## 2. Setup
 
-### 2.1 Install Aucor Starter
+### 2.1 Install Reissuesa
 
 Do these theme installation steps before modifying anything.
 
@@ -82,15 +82,15 @@ Do these theme installation steps before modifying anything.
 1. Download this repository
 2. Extract into /wp-content/themes/ and rename for project as `sitename`
 3. Run setup wizard in theme root with bash `sh setup.sh`
-    1. **Site name** (Default: "Aucor Starter")
-    2. **Unique id** for your theme. Use only a-z and _. The shorter the better. Recommended length is 3-4 characters. (Default: aucor_starter)
-    3. **Local development url** is used by Browsersync and can be changed in `/assets/manifest.js` (Default: https://aucor_starter.local)
+    1. **Site name** (Default: "Reissuesa")
+    2. **Unique id** for your theme. Use only a-z and _. The shorter the better. Recommended length is 3-4 characters. (Default: reissuesa)
+    3. **Local development url** is used by Browsersync and can be changed in `/assets/manifest.js` (Default: https://reissuesa.local)
     4. **Author name** is shown in default style.css (Default: Aucor Oy)
     5. **Author URL** is shown in default style.css (Default: https://www.aucor.fi)
 
 ### 2.2 Install Aucor Core
 
-Some of the functionality of Aucor Starter require plugin Aucor Core. The plugin is centrally updated so that sites using starter will be easier to maintain and there will be less duplicate code from project to project. Aucor Starter won't have fatal errors without it, but for example localization won't work without it.
+Some of the functionality of Reissuesa require plugin Aucor Core. The plugin is centrally updated so that sites using starter will be easier to maintain and there will be less duplicate code from project to project. Reissuesa won't have fatal errors without it, but for example localization won't work without it.
 
 Aucor Core is open source so you can take parts of it and add them to your theme or create your own plugin. You shouldn't make modifications to Aucor Core directly as your changes will be overridden with future updates.
 
@@ -263,7 +263,7 @@ Put all icons to `/assets/sprite/` and Gulp will combine and minify them into `/
 In PHP you can get these images with (more exmples in Template tags):
 
 ```php
-<?php echo aucor_starter_get_svg('facebook'); ?>
+<?php echo reissuesa_get_svg('facebook'); ?>
 ```
 
 ### 5.2 Single SVG images
@@ -288,9 +288,9 @@ Image sizes are defined in `/inc/_conf/register-images.php`. Tips for creating i
 /**
  * Get responsive image markup
  *
- * @example aucor_starter_get_image(123, 'large')
- * @example aucor_starter_get_image(123, 'medium', ['class' => 'teaser-img'])
- * @example aucor_starter_get_image(123, 'medium', ['attr' => ['data-name' => 'data-value']])
+ * @example reissuesa_get_image(123, 'large')
+ * @example reissuesa_get_image(123, 'medium', ['class' => 'teaser-img'])
+ * @example reissuesa_get_image(123, 'medium', ['attr' => ['data-name' => 'data-value']])
  *
  * @param int    $attachment_id ID of image
  * @param string $human_size a easy to understand size of image
@@ -298,7 +298,7 @@ Image sizes are defined in `/inc/_conf/register-images.php`. Tips for creating i
  *
  * @return html markup for image
  */
-function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = array())
+function reissuesa_get_image($attachment_id, $human_size = 'large', $args = array())
 ```
 
 Theme has its own function for getting image markup that gives the developer control of which responsive sizes should be used and include lazy loading.
@@ -323,28 +323,28 @@ switch ($human_size) {
     );
 
   default:
-    aucor_starter_debug('Image size error - Missing human readable size {' . $human_size . '}', array('aucor_starter_get_image'));
+    reissuesa_debug('Image size error - Missing human readable size {' . $human_size . '}', array('reissuesa_get_image'));
 
 }
 ```
 
 Notice that many "human-sizes" can use same WordPress image sizes. This is useful for example when same image might be displayed different size on different devices so you can pass different "sizes" attributes for browser. [Read more about sizes attribute](https://css-tricks.com/responsive-images-css/#article-header-id-1).
 
-**Protip:** If you use CSS property `object-fit` it needs special handling to work in IE11 and older. Theme has [object-fit-polyfill](https://github.com/constancecchen/object-fit-polyfill) installed and all you need to do is add special data attribute for img tag like `aucor_starter_get_image(123, 'medium', ['attr' => ['data-object-fit' => 'cover']])`
+**Protip:** If you use CSS property `object-fit` it needs special handling to work in IE11 and older. Theme has [object-fit-polyfill](https://github.com/constancecchen/object-fit-polyfill) installed and all you need to do is add special data attribute for img tag like `reissuesa_get_image(123, 'medium', ['attr' => ['data-object-fit' => 'cover']])`
 
 ### 5.6 Lazy load
 
 By default the image function has lazy loading on. Lazy loading uses [lazysizes library](https://github.com/aFarkas/lazysizes). When emedding image there's three possibilities:
 
-  * Lazyload from transparent to visible (default): `aucor_starter_get_image(123, 'medium')`
-  * Lazyload from blurry pre-load image to visible: `aucor_starter_get_image(123, 'medium', ['lazyload' => 'animated'])`
-  * No lazyload: `aucor_starter_get_image(123, 'medium', ['lazyload' => false])`
+  * Lazyload from transparent to visible (default): `reissuesa_get_image(123, 'medium')`
+  * Lazyload from blurry pre-load image to visible: `reissuesa_get_image(123, 'medium', ['lazyload' => 'animated'])`
+  * No lazyload: `reissuesa_get_image(123, 'medium', ['lazyload' => false])`
 
 Lazy loading is SEO friendly and function automatically displays `<noscript>` versions for users without JS.
 
 ### 5.7. Favicons
 
-Add all favicon files to `/assets/favicon/` where they will be moved (and images optimized) to `/dist/favicon/`. Use for example [Real Favicon Generator](https://realfavicongenerator.net/) to make favicon. Add favicon embeds to function `aucor_starter_favicons` in `/inc/_conf/register-assets.php`.
+Add all favicon files to `/assets/favicon/` where they will be moved (and images optimized) to `/dist/favicon/`. Use for example [Real Favicon Generator](https://realfavicongenerator.net/) to make favicon. Add favicon embeds to function `reissuesa_favicons` in `/inc/_conf/register-assets.php`.
 
 ## 6. Includes
 
@@ -382,7 +382,7 @@ Directory `/inc/forms/`.
 
 #### Search form
 
-Function: `aucor_starter_search_form($id, $args = array())`
+Function: `reissuesa_search_form($id, $args = array())`
 
 Display easily customizable search form.
 
@@ -392,19 +392,19 @@ Directory `/inc/helpers/`.
 
 #### Dates
 
-Function: `aucor_starter_get_posted_on()`
+Function: `reissuesa_get_posted_on()`
 
 Get published date.
 
 #### Entry footer
 
-Function: `aucor_starter_entry_footer()`
+Function: `reissuesa_entry_footer()`
 
 Display categories and tags of single post.
 
 #### Hardcoded ids
 
-Function: `aucor_starter_get_hardcoded_id($key)`
+Function: `reissuesa_get_hardcoded_id($key)`
 
 Save all harcoded ids in one place in refer them through this function. Example:
 
@@ -416,7 +416,7 @@ Save all harcoded ids in one place in refer them through this function. Example:
  *
  * @return int harcoded id
  */
-function aucor_starter_get_hardcoded_id($key = '') {
+function reissuesa_get_hardcoded_id($key = '') {
 
   switch ($key) {
 
@@ -432,25 +432,25 @@ function aucor_starter_get_hardcoded_id($key = '') {
 ```
 
 Used in template:
-`aucor_starter_get_hardcoded_id('some-id')`
+`reissuesa_get_hardcoded_id('some-id')`
 
 **Notice:** Avoid hardcoding ids if possible. If you really need to do it, centralize them into this function.
 
 #### Build HTML attributes
 
-Function: `aucor_starter_build_attributes($attr)`
+Function: `reissuesa_build_attributes($attr)`
 
 Get valid HTML element attributes from key-value array. Returns a string like `key="value" class="test"`.
 
 #### Last edited
 
-Function: `aucor_starter_last_edited($asset)`
+Function: `reissuesa_last_edited($asset)`
 
 Get last edited timestamp from asset files. Timestamps are saved in `/assets/last-edited.json`.
 
 #### Archive titles
 
-Function: `aucor_starter_get_the_archive_title()`
+Function: `reissuesa_get_the_archive_title()`
 
 #### Setup fallbacks
 
@@ -464,13 +464,13 @@ Has functions for using images and SVG spirte as described in chapter "SVG and I
 
 #### Get SVG from SVG sprite
 
-Function: `aucor_starter_get_svg($icon, $args = array())`
+Function: `reissuesa_get_svg($icon, $args = array())`
 
 Theme includes one big SVG sprite `/assets/images/icons.svg` that has by default a caret (dropdown arrow) and a few social icons. Add your own svg icons in `/assets/sprite/` and Gulp will add them to this sprite with id from filename.
 
 Example: Print out SVG `/assets/sprite/facebook.svg`
 ```php
-<?php echo aucor_starter_get_svg('facebook'); ?>
+<?php echo reissuesa_get_svg('facebook'); ?>
 ```
 
 Example: Print out SVG `/assets/sprite/facebook.svg` with options
@@ -485,7 +485,7 @@ $args = array(
   'aria_hidden' => true, // Hide from screen readers.
 );
 
-echo aucor_starter_get_svg('facebook', $args);
+echo reissuesa_get_svg('facebook', $args);
 ```
 
 ### 6.7 Navigation
@@ -493,15 +493,15 @@ echo aucor_starter_get_svg('facebook', $args);
 Directory `/inc/navigation/` has various function for menus and this that navigate to somewhere.
 
 #### Social share buttons
-Function: `aucor_starter_social_share_buttons()`
+Function: `reissuesa_social_share_buttons()`
 
 Displays share buttons (Facebook, Twitter, LinkedIn, WhatsApp) with link to their sharer.
 ```php
-<?php aucor_starter_social_share_buttons(); ?>
+<?php reissuesa_social_share_buttons(); ?>
 ```
 
 #### Numeric posts navigation
-Function: `aucor_starter_numeric_posts_nav($custom_query = null, $custom_paged_var = null)`
+Function: `reissuesa_numeric_posts_nav($custom_query = null, $custom_paged_var = null)`
 
 Displays numeric navigation instead of normal "next page, last page" navigation. Can be used with a custom query. You can even change the pagination variable if you need to.
 
@@ -511,7 +511,7 @@ if(have_posts())
   while (have_posts()) : the_post();
     ...
   endwhile;
-  aucor_starter_numeric_posts_nav();
+  reissuesa_numeric_posts_nav();
 endif;
 ```
 
@@ -528,7 +528,7 @@ if($loop->have_posts())
   while ($loop->have_posts()) : $loop->the_post();
     ...
   endwhile;
-  aucor_starter_numeric_posts_nav($loop);
+  reissuesa_numeric_posts_nav($loop);
 endif;
 ```
 
@@ -545,18 +545,18 @@ if ($loop->have_posts())
   while ($loop->have_posts() ) : $loop->the_post();
     ...
   endwhile;
-  aucor_starter_numeric_posts_nav($loop, 'current_page');
+  reissuesa_numeric_posts_nav($loop, 'current_page');
 endif;
 ```
 
 #### Sub-pages navigation (pretendable)
-Function: `aucor_starter_sub_pages_navigation()`
+Function: `reissuesa_sub_pages_navigation()`
 
 Displays sub-pages for current page in list. If you need to pretend that single post is somewhere in the hierarchy, use global variable pretend_id to display current view to be in certain place in hierarchy
 
 Usage:
 ```php
-<?php aucor_starter_sub_pages_navigation(); ?>
+<?php reissuesa_sub_pages_navigation(); ?>
 ```
 
 Pretend to be someone else (place it before calling this function):
@@ -567,7 +567,7 @@ $pretend_id = 123; // highlight this item as "current_page_item"
 ```
 
 #### Menu toggle btn
-Function: `aucor_starter_menu_toggle_btn($id, $args = array())`
+Function: `reissuesa_menu_toggle_btn($id, $args = array())`
 
 Display hamburger button for menu.
 
@@ -704,18 +704,18 @@ So there's really no excuse to forget to register your strings no more.
 
 ## 7. Gutenberg and Classic Editor
 
-Aucor Starter supports both Gutenberg and Classic Editor though Gutenberg is preferred.
+Reissuesa supports both Gutenberg and Classic Editor though Gutenberg is preferred.
 
 ### 7.1 Gutenberg architecture
 
 #### Styles
 
-Aucor Starter disables default Gutenberg styles on front-end. This makes developing both easier and harder:
+Reissuesa disables default Gutenberg styles on front-end. This makes developing both easier and harder:
 
   * 👍 No overriding bad styles and wrong breakpoints. No surprise new styles from Gutenberg updates.
   * 👎 You have to re-implement some Gutenberg features like alignment and colors.
 
-In Gutenberg editor, there are still lots of default styles so there might be a few inconsistensies between front-end and back-end. This will get better in future versions of Gutenberg and Aucor Starter.
+In Gutenberg editor, there are still lots of default styles so there might be a few inconsistensies between front-end and back-end. This will get better in future versions of Gutenberg and Reissuesa.
 
 Gutenberg block styles are in `/assets/styles/blocks/`. Each block should have their own file. Also there should be separation for front-end and back-end styles as you'll need to style both. Both styles are defined in same file that is the most convinient way to define them. It does add a bit of unused code to front-end.
 
@@ -737,7 +737,7 @@ Many blocks support alignment and different widths. Generic styles for these are
 
 Set allowed blocks in `/inc/_conf/register-blocks.php`.
 
-Aucor Starter supports these blocks by default:
+Reissuesa supports these blocks by default:
 
 ```php
 // common blocks

@@ -1,0 +1,302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: reissuesa\n"
+"POT-Creation-Date: 2019-11-01 16:35+0200\n"
+"PO-Revision-Date: 2019-11-01 16:35+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;ask__;ask_e\n"
+"X-Poedit-Flags-xgettext: --add-comments\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#. *
+#. * The template for displaying 404 pages (not found).
+#. *
+#. * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+#. *
+#. * @package reissuesa
+#.
+#: 404.php:20
+msgid "404: Page not found description"
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:32
+msgid "One comment"
+msgstr ""
+
+#: comments.php:39
+#, php-format
+msgctxt "comments title"
+msgid "%1$s reply on %2$s"
+msgid_plural "%1$s replies on %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Are there comments to navigate through?
+#: comments.php:54 comments.php:76
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:57
+msgid "Older comments"
+msgstr ""
+
+#: comments.php:58
+msgid "Newer comments"
+msgstr ""
+
+#: comments.php:79
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:80
+msgid "Newer Comments"
+msgstr ""
+
+#. Check for comment navigation.
+#. Check for have_comments().
+#. If comments are closed and there are comments, let's leave a little note, shall we?
+#: comments.php:93
+msgid "Comments are closed."
+msgstr ""
+
+#. *
+#. * The template for displaying the footer.
+#. *
+#. * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+#. *
+#. * @package reissuesa
+#.
+#: footer.php:26
+msgid "Footer: Admin"
+msgstr "Admin"
+
+#: footer.php:33
+msgid "Footer: WP theme"
+msgstr "WP theme"
+
+#. *
+#. * Header
+#. *
+#. * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+#. *
+#. * @package reissuesa
+#.
+#: header.php:25
+msgid "Accessibility: Skip to content"
+msgstr "Skip to content"
+
+#. *
+#. * Template part: Primary menu
+#. *
+#. * @package reissuesa
+#.
+#: inc/_conf/register-menus.php:11 partials/navigation/menu-primary.php:10
+msgid "Menu: Primary Menu"
+msgstr "Primary Menu"
+
+#. *
+#. * Template part: Social menu
+#. *
+#. * @package reissuesa
+#.
+#: inc/_conf/register-menus.php:12 partials/navigation/menu-social.php:10
+msgid "Menu: Social Menu"
+msgstr "Social Menu"
+
+#: inc/_conf/register-sidebars.php:16
+msgid "Primary Sidebar"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:17
+msgid "Sidebar on the right side"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:28
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:29
+msgid "Add footer widgets here."
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:39
+msgid "Front page widgets"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:40
+msgid "Add front page widgets here."
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:50
+msgid "About page widgets"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:51
+msgid "Add About page widgets here."
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:61
+msgid "Visited page widgets"
+msgstr ""
+
+#: inc/_conf/register-sidebars.php:62
+msgid "Add Visited page widgets here."
+msgstr ""
+
+#: inc/forms/function-search-form.php:25
+msgid "Search: Submit"
+msgstr "Submit"
+
+#. can be HTML, icons etc
+#: inc/forms/function-search-form.php:26
+msgid "Search: Placeholder"
+msgstr "Search..."
+
+#: inc/forms/function-search-form.php:27
+msgid "Search: Screen reader label"
+msgstr "Search from site"
+
+#: inc/helpers/customizer.php:51
+msgid "Primary Color"
+msgstr ""
+
+#: inc/helpers/customizer.php:53
+msgctxt "primary color"
+msgid "Default"
+msgstr ""
+
+#: inc/helpers/customizer.php:54
+msgctxt "primary color"
+msgid "Custom"
+msgstr ""
+
+#: inc/helpers/customizer.php:76
+msgid "Apply a custom color for buttons, links, featured images, etc."
+msgstr ""
+
+#: inc/helpers/customizer.php:96
+msgid "Apply a filter to featured images using the primary color"
+msgstr ""
+
+#: inc/helpers/function-entry-footer.php:18
+msgid "Taxonomies: Categories"
+msgstr "Categories"
+
+#: inc/helpers/function-entry-footer.php:23
+msgid "Taxonomies: Keywords"
+msgstr "Keywords"
+
+#.
+#. * Translators: If there are characters in your language that are not
+#. * supported by Open Sans and Montserrat, translate this to 'off'. Do not translate
+#. * into your own language.
+#.
+#: inc/helpers/function-fonts.php:19
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/helpers/function-fonts.php:20
+msgctxt "Montserrat: on or off"
+msgid "on"
+msgstr ""
+
+#: inc/helpers/function-titles.php:15
+msgid "Title: Archives"
+msgstr "Archives"
+
+#: inc/helpers/function-titles.php:20
+msgid "Title: Home"
+msgstr "Blog"
+
+#: inc/helpers/function-titles.php:22
+msgid "Title: Search"
+msgstr "Search"
+
+#: inc/helpers/function-titles.php:24
+msgid "Title: 404"
+msgstr "404"
+
+#: inc/navigation/function-menu-toggle.php:25
+msgid "Menu: Button label"
+msgstr "Menu"
+
+#: inc/navigation/function-numeric-posts-nav.php:21
+msgid "Navigation: Next"
+msgstr "Next"
+
+#: inc/navigation/function-numeric-posts-nav.php:22
+msgid "Navigation: Previous"
+msgstr "Previous"
+
+#: inc/navigation/function-post-navigation.php:9
+msgid "Next post"
+msgstr ""
+
+#: inc/navigation/function-post-navigation.php:10
+msgid "Next post:"
+msgstr ""
+
+#: inc/navigation/function-post-navigation.php:12
+msgid "Previous post"
+msgstr ""
+
+#: inc/navigation/function-post-navigation.php:13
+msgid "Previous post:"
+msgstr ""
+
+#: inc/navigation/function-share-buttons.php:21
+#: inc/navigation/function-share-buttons.php:23
+msgid "Social share: Title"
+msgstr "Share on Social Media"
+
+#: inc/navigation/function-share-buttons.php:27
+msgid "Social share: Facebook"
+msgstr "Share on Facebook"
+
+#: inc/navigation/function-share-buttons.php:32
+msgid "Social share: Twitter"
+msgstr "Share on Twitter"
+
+#: inc/navigation/function-share-buttons.php:37
+msgid "Social share: LinkedIn"
+msgstr "Share on LinkedIn"
+
+#: inc/navigation/function-share-buttons.php:42
+msgid "Social share: WhatsApp"
+msgstr "Share on WhatsApp"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: partials/content/content.php:37
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: partials/content/content.php:48
+msgid "Pages:"
+msgstr ""
+
+#. *
+#. * The template for displaying search results pages.
+#. *
+#. * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+#. *
+#. * @package reissuesa
+#.
+#: search.php:35
+msgid "Search: Nothing found description"
+msgstr "No search results found. Try different words."

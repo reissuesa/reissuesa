@@ -10,12 +10,14 @@ $white:                #fff;
 $grey:                 #ddd;
 $grey-light:           #eee;
 
-$blue:                 #42a0d9;
+$blue:                 #0074d9; //   #42a0d9;
+
+$pink:                 #e1518d;
 
 /* Context colors
 ----------------------------------------------- */
 
-$primary:              #c82986;
+$primary:              #0074d9; // #e1518d; // #c82986
 
 /* Text colors
 ----------------------------------------------- */
@@ -26,5 +28,5 @@ $grey-font-color:      #888;
 /* Special colors
 ----------------------------------------------- */
 
-$menu-dropdown-bg:     $base-font-color;
+$menu-dropdown-bg:     #263238; //  #1c252a; // $base-font-color
 $menu-dropdown-color:  $white;

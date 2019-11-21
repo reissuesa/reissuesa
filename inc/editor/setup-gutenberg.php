@@ -2,7 +2,7 @@
 /**
  * Setup Gutenberg
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**

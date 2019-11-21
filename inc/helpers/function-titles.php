@@ -2,7 +2,7 @@
 /**
  * Function for fetching archive titles
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @return string the title
  */
-function aucor_starter_get_the_archive_title() {
+function reissuesa_get_the_archive_title() {
 
   $title = ask__('Title: Archives');
 

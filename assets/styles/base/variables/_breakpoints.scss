@@ -42,3 +42,14 @@ $hero-xl: 1600px;
 $teaser-s: $s;
 $teaser-m: $m;
 $teaser-l: $l;
+
+/* Layout breakpoints
+----------------------------------------------- */
+
+$size__ratio-small: 25%; // 25%;
+$size__ratio-large: 72%; // 70%;
+
+$query__small: 600px;
+$query__medium: 900px;
+$query__large: 1200px;
+

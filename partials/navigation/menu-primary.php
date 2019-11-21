@@ -2,7 +2,7 @@
 /**
  * Template part: Primary menu
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 ?>

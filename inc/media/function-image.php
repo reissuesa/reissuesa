@@ -2,15 +2,15 @@
 /**
  * Functions for fetching responsive image markup
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
  * Get responsive image markup
  *
- * @example aucor_starter_get_image(123, 'large')
- * @example aucor_starter_get_image(123, 'medium', ['class' => 'teaser-img'])
- * @example aucor_starter_get_image(123, 'medium', ['attr' => ['data-name' => 'data-value']])
+ * @example reissuesa_get_image(123, 'large')
+ * @example reissuesa_get_image(123, 'medium', ['class' => 'teaser-img'])
+ * @example reissuesa_get_image(123, 'medium', ['attr' => ['data-name' => 'data-value']])
  *
  * @param int    $attachment_id ID of image
  * @param string $human_size a easy to understand size of image
@@ -18,7 +18,7 @@
  *
  * @return html markup for image
  */
-function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = array()) {
+function reissuesa_get_image($attachment_id, $human_size = 'large', $args = array()) {
 
   // fetch attachment metadata from database
   $image = wp_get_attachment_metadata($attachment_id);
@@ -55,13 +55,13 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
   );
 
   // get desired sizes for image
-  $desired_sizes = aucor_starter_human_image_size_to_wp_sizes($human_size);
+  $desired_sizes = reissuesa_human_image_size_to_wp_sizes($human_size);
 
   // figure out which desired sizes are possible
-  $possible_sizes = aucor_starter_get_possible_image_sizes($desired_sizes, $generated_sizes);
+  $possible_sizes = reissuesa_get_possible_image_sizes($desired_sizes, $generated_sizes);
 
   // src
-  $attr['src'] = aucor_starter_get_image_url($attachment_id, $possible_sizes['primary']);
+  $attr['src'] = reissuesa_get_image_url($attachment_id, $possible_sizes['primary']);
 
   // width
   $attr['width'] = $generated_sizes[$possible_sizes['primary']]['width'];
@@ -72,7 +72,7 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
   // srcset
   $srcset = array();
   foreach ($possible_sizes['supporting'] as $key => $possible_size) {
-    $srcset[] = aucor_starter_get_image_url($attachment_id, $possible_size) . ' ' . $generated_sizes[$possible_size]['width'] . 'w';
+    $srcset[] = reissuesa_get_image_url($attachment_id, $possible_size) . ' ' . $generated_sizes[$possible_size]['width'] . 'w';
   }
   if (!empty($srcset)) {
     $attr['srcset'] = implode(', ', $srcset);
@@ -83,7 +83,7 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
   if ($args['lazyload']) {
 
     // <img> tag for <noscript> situation
-    $html .= '<noscript><img' . aucor_starter_build_attributes($attr) . ' /></noscript>';
+    $html .= '<noscript><img' . reissuesa_build_attributes($attr) . ' /></noscript>';
 
     // add lazyload class
     $attr['class'] .= ' lazyload';
@@ -113,7 +113,7 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
   }
 
   // <img> tag to be lazyloaded
-  $html .= '<img' . aucor_starter_build_attributes($attr) . ' />';
+  $html .= '<img' . reissuesa_build_attributes($attr) . ' />';
 
   // <img> tag for blurry preload image
   if ($args['lazyload'] == 'animated') {
@@ -157,7 +157,7 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
  *
  * @return string URL
  */
-function aucor_starter_get_image_url($attachment_id, $size) {
+function reissuesa_get_image_url($attachment_id, $size) {
 
   $image_url = '';
   $image_src = wp_get_attachment_image_src($attachment_id, $size);
@@ -176,7 +176,7 @@ function aucor_starter_get_image_url($attachment_id, $size) {
  *
  * @return array list of possible image sizes from desired sizes
  */
-function aucor_starter_get_possible_image_sizes($desired_sizes, $generated_sizes) {
+function reissuesa_get_possible_image_sizes($desired_sizes, $generated_sizes) {
 
   $real_sizes = array();
 

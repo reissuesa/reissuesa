@@ -9,26 +9,38 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package aucor_starter
+ * @package reissuesa
  */
+
 
 get_header(); ?>
 
   <?php get_template_part('partials/content/hero'); ?>
 
+<div class="flex-container">
+
   <div id="primary" class="primary primary--index">
+
     <main id="main" class="main">
 
       <div class="teaser-container">
         <?php while (have_posts()) : the_post(); ?>
-          <?php get_template_part('partials/content/teaser'); ?>
+          <div class="teaser__card">
+            <?php get_template_part('partials/content/teaser2'); ?>
+          </div>
         <?php endwhile; ?>
       </div>
 
-      <?php aucor_starter_numeric_posts_nav(); ?>
+      <?php
+        reissuesa_numeric_posts_nav();
+
+      ?>
+
 
     </main><!-- #main -->
   </div><!-- #primary -->
+
+</div> <!-- #flex-container -->
 
 <?php
 get_footer();

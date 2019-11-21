@@ -3,12 +3,14 @@
 ========================================================================== */
 
 .social-navigation {
+  margin-left: 1rem;
 
   &__items {
     @include list-reset;
 
     li {
       display: inline-block;
+      padding-bottom: 0.2rem;
       margin-right: $gap-small;
       &:last-of-type {
         margin-right: 0;

@@ -1,11 +1,71 @@
+
 /* ==========================================================================
  # Layout
 ========================================================================== */
 
+.site-content {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+
+@media screen and (min-width: $query__medium) {
+
+  .primary--index.frontpage {
+    max-width: 100%;
+  }
+
+  .home.page, {
+    #primary {
+      width: 100%;
+    }
+  }
+
+  .page  { //, .home, .archive
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: $max-width-l;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #primary {
+      width: $size__ratio-large;
+    }
+
+    #secondary {
+      width: $size__ratio-small;
+    }
+
+  }
+}
+
+#primary.no-sidebar {
+  width: 100%;
+}
+
+#secondary.no-sidebar {
+  width: 0%;
+}
+
 .primary {
 
   padding-top: $gap-big;
-  padding-bottom: $gap-big;
+
+.flex-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: $max-width-l;
+  .firstpost {
+    width: 800px;
+    flex: 1 1 auto;
+  }
+}
 
   /* -------------------------------------------------------
     Pages
@@ -68,5 +128,7 @@
   }
 
 }
+
+
 
 

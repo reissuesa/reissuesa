@@ -2,19 +2,19 @@
 /**
  * Function for custom search form
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
  * Custom search form
  *
- * @example aucor_starter_search_form('search-header')
- * @example aucor_starter_search_form('search-header', ['submit' => aucor_starter_get_svg('submit')])
+ * @example reissuesa_search_form('search-header')
+ * @example reissuesa_search_form('search-header', ['submit' => reissuesa_get_svg('submit')])
  *
  * @param string $id HTML ID tag
  * @param array  $args options for form element
  */
-function aucor_starter_search_form($id, $args = array()) {
+function reissuesa_search_form($id, $args = array()) {
 
   // set defaults
   $defaults = array(

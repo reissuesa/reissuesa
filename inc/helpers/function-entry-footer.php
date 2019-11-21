@@ -2,13 +2,13 @@
 /**
  * Function for entry footer
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
  * Entry footer
  */
-function aucor_starter_entry_footer() {
+function reissuesa_entry_footer() {
 
   // hide category and tag text for pages
   if (get_post_type() === 'post') {

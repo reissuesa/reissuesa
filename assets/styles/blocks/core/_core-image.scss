@@ -8,9 +8,10 @@
 .editor-styles-wrapper .wp-block-image,
 .wysiwyg .wp-block-image {
 
-  margin-top: $gap;
-  margin-bottom: $gap;
+  margin-top: $gap-semi-big; // $gap;
+  margin-bottom: $gap-semi-big; // $gap;
   text-align: center;
+  @include wrap; // centered -> 1216px, for old posts converted from classic
 
   img {
     display: inline-block;
@@ -25,8 +26,8 @@
   }
 
   &.alignfull {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap-semi-big;
+    margin-bottom: $gap-semi-big;
     figcaption {
       padding-left: $gap;
       padding-right: $gap;
@@ -43,11 +44,11 @@
 
   // caption
   figcaption {
-    color: $grey-font-color;
+    color: $base-font-color;
     display: block;
     margin-top: $gap-tiny;
     margin-bottom: $gap;
-    font-size: .875rem;
+    font-size: .9375rem;
   }
 
 }
@@ -72,3 +73,30 @@
 
 }
 
+/* Instagram Embed
+----------------------------------------------- */
+
+iframe.instagram-media {
+	margin: 0 auto !important;
+}
+
+
+/* Reissuesan matkablogi -image
+----------------------------------------------- */
+
+#reissuesan-matkablogi-small {
+  padding-left: 1rem;
+}
+
+#reissuesan-matkablogi-big {
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  #reissuesan-matkablogi-big {
+    display: block;
+  }
+  #reissuesan-matkablogi-small {
+    display: none;
+  }
+}

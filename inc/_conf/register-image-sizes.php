@@ -2,7 +2,7 @@
 /**
  * Register: Image sizes
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -14,13 +14,13 @@ add_action('after_setup_theme', function() {
   $default_image_sizes = [
     [
       'name' => 'thumbnail',
-      'w'    => 100,
-      'h'    => 100,
+      'w'    => 300,
+      'h'    => 450,
     ],
     [
       'name' => 'medium',
-      'w'    => 360,
-      'h'    => 720,
+      'w'    => 400, //360
+      'h'    => 800, //720
     ],
     [
       'name' => 'large',
@@ -58,7 +58,7 @@ add_action('after_setup_theme', function() {
  *
  * @return array of responsive image stuff
  */
-function aucor_starter_human_image_size_to_wp_sizes($human_size) {
+function reissuesa_human_image_size_to_wp_sizes($human_size) {
 
   switch ($human_size) {
 
@@ -98,7 +98,7 @@ function aucor_starter_human_image_size_to_wp_sizes($human_size) {
       );
 
     default:
-      aucor_starter_debug('Image size error - Missing human readable size {' . $human_size . '}', array('aucor_starter_get_image'));
+      reissuesa_debug('Image size error - Missing human readable size {' . $human_size . '}', array('reissuesa_get_image'));
 
   }
 

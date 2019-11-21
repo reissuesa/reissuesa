@@ -5,11 +5,394 @@
 .site-footer {
   background: $grey-light;
   padding: 2rem 0;
+  // margin-top: 4rem; // 3rem;
 
   &__container {
     @include wrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; // space-between;
+    padding: 0 1rem;
+  }
+
+  &__theme {
+    color: $grey-font-color;
   }
 
 }
+
+/* ==========================================================================
+ # Footer widget stylings
+========================================================================== */
+
+
+/* Footer widgets for archive pages */
+.archive-view {
+	@media screen and (min-width: $query__medium) {
+		&.has-sidebar {
+			.footer-widgets {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.widget {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+	padding: 0 0 1em;
+	font-family: $font-text;
+
+
+	ul,
+	ol {
+		padding: .7em 0 0;
+		margin-bottom: 0;
+    list-style-type: none;
+
+		li {
+			display: block;
+      line-height: 1.78em;
+
+			ul,
+			ol {
+				margin-left: .5em;
+
+				@media screen and (min-width: 30em) {
+					margin-left: 1em;
+				}
+			}
+
+		}
+	}
+
+	a {
+		font-weight: 400;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+                        text-decoration: underline;
+			// border-bottom: 3px solid $color__interactive;
+		}
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		width: 100%;
+		// height: 2.5em;
+		padding: 10px;
+		font-family: $font-text;
+		border: 1px solid #ccc;
+	}
+
+}
+
+.widget-title {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-size: 1.4em;
+}
+
+/* Archive and Categories widgets */
+.widget_archive li {
+	color: #7D7D7D;
+}
+
+.widget_categories .children {
+	padding-top: 0;
+}
+
+
+
+/* Pages and Menu widgets */
+.widget_pages .children,
+.widget_nav_menu .sub-menu {
+	padding-top: 0;
+	padding-bottom: .5em;
+}
+
+.widget_pages,
+.widget_nav_menu {
+
+	a {
+		display: block;
+		padding: 1em 0;
+		text-decoration: none;
+		border-bottom: 1px dashed hsl(0, 0%, 50%);
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			border-bottom: 1px dashed hsl(0, 0%, 50%);
+		}
+	}
+
+	li {
+		padding: 0;
+
+	}
+
+}
+
+
+/* Meta widget */
+.widget_meta li {
+	padding: 0;
+}
+
+/* Recent comments */
+.widget_recent_comments {
+
+	li {
+		line-height: 1.3em;
+		padding-bottom: .5em;
+	}
+
+	a:hover,
+	a:focus {
+		padding-left: 0;
+	}
+
+}
+
+/* RSS widget */
+.widget_rss li {
+	margin-bottom: 1em;
+}
+.widget li a.rsswidget {
+	padding-right: .5em;
+	font-size: 1em;
+	line-height: 1.4em;
+}
+
+.rss-date,
+.widget_rss cite {
+	color: #333;
+	font-size: .8em;
+}
+
+.rssSummary {
+	padding: .5em 0;
+	font-family: $font-text;
+	font-size: .8em;
+    line-height: 1.4em;
+}
+
+/* Search widget */
+.widget_search input[type="search"] {
+	box-sizing: border-box;
+	width: 100%;
+	padding: .7em 1em;
+	border: 1px solid #c3c3c3;
+	border-radius: 0;
+}
+.widget_search .search-submit {
+	margin-left: .5em;
+}
+
+
+/* Calendar widget */
+.widget_calendar {
+	font-weight: 400;
+
+	caption {
+		padding: .5em 0;
+		font-size: 1em;
+		font-weight: 500;
+		text-align: left;
+	}
+
+	thead {
+		background: transparent;
+		color: black;
+
+		th {
+			border-bottom-width: 2px;
+		}
+	}
+
+	td {
+		padding: .2em;
+		font-size: .8em;
+		text-align: center;
+		background: white;
+		border: 1px solid hsl(0, 0%, 80%);
+	}
+
+	th {
+		border: none;
+		text-align: center;
+	}
+
+	.pad {
+		background: #eaeaea;
+	}
+
+	a {
+		font-weight: 900;
+		text-decoration: none;
+	}
+
+}
+
+/* Text widget */
+.textwidget {
+	font-size: 100%;
+  line-height: 1.5em; // 1.3em;
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1.25rem;
+  }
+}
+
+
+
+
+/* Footer and bio widget stylings */
+
+.footer-wrapper {
+  width: 100%;
+  background-color: #1c252a; // #263238;
+}
+
+.footer-widgets {
+	margin: 4em 0 0;
+	padding: 1em 0;
+  background-color: #263238; // hsl(0, 0%, 20%);
+  max-width: 76rem;
+  margin-left: auto;
+  margin-right: auto;
+
+	@media screen and (min-width: $query__small) {
+		padding: 1em 1em;
+  }
+
+
+  h3.widget-title {
+    // margin-top: $gap-semi-big;
+    margin-bottom: $gap-medium;
+    font-size: 1.625rem; // 26px
+    text-transform: uppercase;
+    // letter-spacing: 2px;
+    // background: $grey-light; // #f2f2f2;
+    color: #b9d2de; // $black;
+    padding: 12px 0;
+    font-weight: normal;
+    font-family: Montserrat, sans-serif;
+  }
+
+	.widget {
+		flex: 1;
+		margin: 0 1em 2em;
+    padding-top: 1em;
+
+		.original-title {
+			color: hsla(0, 0%, 100%, .5);
+		}
+	}
+
+	.widget,
+	.widget-title,
+	.widget a,
+	.widget_calendar thead,
+	.rss-date,
+	.widget_rss cite {
+    color: white;
+    .link_underline a {
+      text-decoration: underline;
+    }
+    .bio {
+      max-width:350px;
+    }
+	}
+
+	.widget_calendar td,
+	.widget_calendar a {
+		color: black;
+	}
+
+	@media screen and (min-width: $query__medium) {
+		/* Use flex to create a responsive layout */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		/* If only one widget is displayed, make it full width. */
+		.widget:only-of-type {
+			width: 100%;
+		}
+
+		/* If 2 or 3 widgets are displayed, make the second one twice as wide. */
+		.widget:nth-last-child(n+2):nth-last-child(-n+3):first-child ~ .widget:nth-child(2) {
+			flex: 1; // was: 2
+		}
+
+		/* If 4 or more widgets are displayed, show three across when available. */
+		.widget:nth-last-child(n+4),
+		.widget:nth-last-child(n+4) ~ .widget {
+			width: 30%;
+			flex: 1 1 30%;
+		}
+	}
+
+}
+
+img#reissuesa_etusivu {
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+
+/* ==========================================================================
+ # Footer widget stylings Instagram
+========================================================================== */
+
+.widget-area.footer-widgets.instagram {
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+/* ==========================================================================
+ # Widget stylings Visited
+========================================================================== */
+
+.visited {
+  .widget .textwidget p {
+    font-size: 15px;
+  }
+}
+
+
+/* ==========================================================================
+ # Widget stylings sidebars
+========================================================================== */
+
+.primary-widgets, .primary-widgets .textwidget p {
+  font-size: 15px;
+}
+
+/* ==========================================================================
+ # Instagram plugin under footer
+========================================================================== */
+
+#sb_instagram {
+  &.sbi_col_5, &.sbi_col_8 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $query__small) {
+  #sb_instagram.sbi_col_5 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $query__large) {
+  #sb_instagram.sbi_col_8 {
+    display: block;
+  }
+  #sb_instagram.sbi_col_5 {
+    display: none;
+  }
+}
+

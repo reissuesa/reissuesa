@@ -2,47 +2,129 @@
  # Teaser
 ========================================================================== */
 
+
 .teaser-container {
-  @include narrow-content;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 20px;
+
+  &.lightgrey {
+    // background: $grey-light;
+  }
+
+  .teaser__card {
+    border: 0 solid #d7d7d7;
+    max-width: 400px; // 360px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 0;
+
+    .teaser__thumbnail img {
+      border-radius: 0;
+    }
+
+    .teaser__content {
+      padding: $gap-medium;
+
+      .teaser__header__date {
+        font-size: .875rem;
+        display: block;
+        // text-align: center;
+      }
+
+      .teaser__header__title {
+        font-family: $font-title;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin: 0;
+        // text-align: center;
+        &.bold {
+          font-weight: $semi-bold;
+        }
+
+        a {
+          color: #333;
+
+          &:hover {
+            text-decoration: none;
+            color: #777;
+          }
+        }
+      }
+    }
+  }
 }
 
+@media screen and (min-width: $query__small) {
+  .teaser-container {
+    @include grid(2);
+
+    .teaser__header__title {
+
+    }
+
+    .teaser__thumbnail img {
+      display: block;
+      overflow: hidden;
+      width: 400px;
+      height: 225px;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+  }
+}
+
+@media screen and (min-width: $query__medium) {
+  .teaser-container {
+    @include grid(3);
+
+    .teaser__header__title {
+    }
+  }
+}
+
+@media screen and (min-width: $query__large) {
+  .teaser-container {
+    @include grid(3);
+
+    .teaser__header__title {
+    }
+
+  }
+}
+
+
+
+
+/*
 .teaser {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: $gap;
+  display: block;
+  // justify-content: space-between;
+  margin-bottom: $gap-big; // $gap;
 
   &__thumbnail {
-    flex-shrink: 0;
-    margin-right: $gap;
-    max-width: 4rem;
-    @include breakpoint($s) {
-      max-width: none;
-    }
+    display: block;
+    padding-bottom: $gap-small;
+
     a, img {
       display: block;
       line-height: 0;
     }
   }
 
-  &__content {
-    flex-grow: 1;
-  }
-
   &__header {
-    margin-bottom: .75rem;
+    margin-bottom: 1.25rem; // .75rem;
     &__title {
-      font-size: 1.25rem;
+      font-size: 2rem; // 1.25rem;
       margin: 0;
+      // text-align: center; // added
       a {
         text-decoration: none;
-        color: $base-font-color;
+        color: $pink; // $base-font-color;
       }
     }
     &__date {
       display: block;
       font-size: .875rem;
+      // text-align: center; // added
     }
 
   }
@@ -50,13 +132,35 @@
   &__summary {
     @include child-margin-reset;
     p {
-      font-size: .875rem;
+      font-size: 1rem; // .875rem;
+      // line-height: $line-height-big; // added this: 1.75
     }
   }
 
 }
 
+@media screen and (min-width: $query__small) {
+  .teaser-container {
+    @include wrap;
+  }
 
+  .teaser {
+    display: flex;
+    justify-content: space-between;
 
+    &__thumbnail {
+      flex-shrink: 0;
+      margin-right: $gap;
+      max-width: 4rem;
+      padding-bottom: 0;
+      @include breakpoint($s) {
+        max-width: none;
+      }
 
-
+      &__content {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+*/

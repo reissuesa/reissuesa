@@ -2,12 +2,43 @@
  # Primary menu
 ========================================================================== */
 
+.site-header #social-navigation {
+  display: none;
+}
+
+@include breakpoint($menu-visible) {
+
+  #flex-container-menu-top {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // background-color: $grey-light;
+  }
+
+  #primary-navigation, .site-header #social-navigation  {
+    display: flex;
+    justify-content: center;
+    // background-color: $grey-light;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .menu-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 .primary-navigation__items {
+
+  padding-top: 0;
 
   /* Both navigations
   ----------------------------------------------- */
 
-  a {}
+   a {
+    text-transform: uppercase;
+
+  }
 
   &, ul {
     @include list-reset;
@@ -31,7 +62,7 @@
 
   @include breakpoint($menu-hidden) {
     display: none;
-    padding: $gap 0 0;
+    padding: $gap-tiny;
     .active & {
       display: block;
     }
@@ -50,7 +81,7 @@
       & > span {
         align-items: center;
         display: flex;
-        min-height: 2rem;
+        min-height: 1.5rem; // 2rem
       }
 
       // call to action
@@ -119,7 +150,7 @@
       height: 0;
       overflow: hidden;
       &.open {
-        padding: $gap-small 0 $gap-small $gap-small;
+        padding: $gap-tiny 0 $gap-tiny $gap-small;
         overflow: visible;
         height: auto;
       }
@@ -137,7 +168,7 @@
     // 1st level <li>
     & > li {
 
-      padding: .5rem 0;
+      padding: .25rem 0;
       border-top: 1px solid $grey;
       &:first-of-type {
         border-top: 0;
@@ -155,7 +186,7 @@
           // 2nd level <ul class="sub-menu"> [open]
           &.open {
             opacity: 1;
-            max-height: 999px;
+            max-height: 1999px; //999
 
           }
 
@@ -173,7 +204,7 @@
 
               // 3rd level <ul class="sub-menu"> [open]
               &.open {
-                max-height: 999px;
+                max-height: 1999px; //999
                 opacity: 1;
               }
             }
@@ -197,6 +228,7 @@
     flex-wrap: wrap;
     align-items: center;
 
+
     // all <li>
     li {
       & > span {
@@ -212,6 +244,7 @@
       color: $base-font-color;
       text-decoration: none;
       flex-grow: 1;
+
     }
 
     // all carets
@@ -237,7 +270,7 @@
     // 1st level <li>
     & > li {
       position: relative;
-      margin-right: $gap;
+      margin-right: $gap-medium;
       &:last-of-type {
         margin-right: 0;
       }
@@ -257,7 +290,7 @@
         background: $menu-dropdown-bg;
         & > span > a {
           color: $menu-dropdown-color;
-          padding: .5rem .75rem;
+          padding: .2rem .75rem; // .5rem .75rem
           font-size: .875rem;
           display: block;
         }
@@ -348,5 +381,12 @@
       }
 
     }
+  }
+}
+
+// why needed, from where 70rem
+@media (min-width: 70rem) and (min-width: 890px) {
+  .primary-navigation__items>li>span>a {
+    font-size: 0.875rem;
   }
 }

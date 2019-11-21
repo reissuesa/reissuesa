@@ -2,7 +2,7 @@
 /**
  * Function for image attributes
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @return string attributes for html element
  */
-function aucor_starter_build_attributes($attr) {
+function reissuesa_build_attributes($attr) {
 
   $attr_str = '';
   foreach ($attr as $key => $value) {

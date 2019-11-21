@@ -19,16 +19,16 @@
   }
 
   & > .alignfull {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap-semi-big;
+    margin-bottom: $gap-semi-big;
     margin-left: -$gap;
     margin-right: -$gap;
     max-width: none;
   }
 
   & > .alignwide {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap-semi-big;
+    margin-bottom: $gap-semi-big;
     max-width: $max-width-l;
   }
 

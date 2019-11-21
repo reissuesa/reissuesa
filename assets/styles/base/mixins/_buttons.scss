@@ -20,12 +20,35 @@
   text-decoration: none;
   vertical-align: baseline;
   &:hover, &:focus, &:active {
-    background: darken($primary, 5);
-    transform: translateY(-.125rem);
+    background: darken($primary, 10); // 5->10
+    // transform: translateY(-.125rem);
   }
 }
 
 // button variaton: big
 @mixin button--big {
   padding: $gap-medium $gap;
+}
+
+// button variaton: small
+@mixin button--small {
+  @include button-reset;
+  @include transition;
+  background: $primary;
+  border-radius: 5rem;
+  color: $white;
+  display: inline-block;
+  font-size: .875rem;
+  @include breakpoint($s) {
+    font-size: .875rem; // 1rem
+  }
+  font-weight: $normal;
+  line-height: 1.25;
+  padding: $gap-tiny $gap-small;
+  text-decoration: none;
+  vertical-align: baseline;
+  &:hover, &:focus, &:active {
+    background: darken($primary, 10); // 5->10
+    // transform: translateY(-.125rem);
+  }
 }

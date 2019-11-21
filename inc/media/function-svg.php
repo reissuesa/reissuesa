@@ -2,7 +2,7 @@
 /**
  * Function for fetching SVGs
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -10,15 +10,15 @@
  *
  * Return x:linked markup of SVG from the big SVG sprite.
  *
- * @example aucor_starter_get_svg('plus')
- * @example aucor_starter_get_svg('plus', ['class' => 'icon-more'])
+ * @example reissuesa_get_svg('plus')
+ * @example reissuesa_get_svg('plus', ['class' => 'icon-more'])
  *
  * @param string $icon the filename without .svg
  * @param array  $args list of options
  *
  * @return string SVG markup
  */
-function aucor_starter_get_svg($icon, $args = array()) {
+function reissuesa_get_svg($icon, $args = array()) {
 
   // set defaults
   $defaults = array(
@@ -63,7 +63,7 @@ function aucor_starter_get_svg($icon, $args = array()) {
   }
 
   // include icon
-  $svg .= '<use xlink:href="' . get_template_directory_uri() . '/dist/sprite/sprite.svg?ver=' . aucor_starter_last_edited('svg') . '#icon-' . esc_html($icon) . '"></use>';
+  $svg .= '<use xlink:href="' . get_template_directory_uri() . '/dist/sprite/sprite.svg?ver=' . reissuesa_last_edited('svg') . '#icon-' . esc_html($icon) . '"></use>';
 
   // end SVG markup
   $svg .= '</svg>';

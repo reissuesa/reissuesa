@@ -4,14 +4,18 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package aucor_starter
+ * @package reissuesa
+ */
+
+  /*
+ Template Name: Normal Page without sidebar
  */
 
 get_header(); ?>
 
   <?php get_template_part('partials/content/hero'); ?>
 
-  <div id="primary" class="primary primary--page">
+  <div id="primary" class="primary primary--page no-sidebar">
 
     <main id="main" class="main">
 

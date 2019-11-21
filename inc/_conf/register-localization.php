@@ -2,7 +2,7 @@
 /**
  * Register: translatable strings
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -25,7 +25,7 @@ add_filter('aucor_core_pll_register_strings', function() {
     // menu
     'Menu: Button label'                => 'Menu',
     'Menu: Primary Menu'                => 'Päävalikko',
-    'Menu: Social Menu'                 => 'Sosiaalisen median kanavat',
+    'Menu: Social Menu'                 => 'Some-valikko',
 
     // 404
     '404: Page not found description'   => 'Sivu on saatettu poistaa tai siirtää eri osoitteeseen. Käytä alla olevaa hakua löytääksesi etsimäsi.',
@@ -46,7 +46,7 @@ add_filter('aucor_core_pll_register_strings', function() {
     'Navigation: Next'                   => 'Seuraava',
 
     // social
-    'Social share: Title'                => 'Jaa sosiaalisessa mediassa',
+    'Social share: Title'                => 'Jaa somessa',
     'Social share: Facebook'             => 'Jaa Facebookissa',
     'Social share: Twitter'              => 'Jaa Twitterissä',
     'Social share: LinkedIn'             => 'Jaa LinkedInissä',
@@ -56,9 +56,11 @@ add_filter('aucor_core_pll_register_strings', function() {
     'Taxonomies: Keywords'               => 'Avainsanat',
     'Taxonomies: Categories'             => 'Kategoriat',
 
+    // footer
+    'Footer: Admin'                      => 'Ylläpito',
+    'Footer: WP theme'                   => 'WP-teema',
+
     // colors
-    'Color: White'                       => 'Valkoinen',
-    'Color: Black'                       => 'Musta',
     'Color: Primary'                     => 'Pääväri',
 
   );

@@ -2,15 +2,20 @@
  # Hero
 ========================================================================== */
 
+/* Hero
+----------------------------------------------- */
+
 .hero {
   align-items: center;
   background: $grey-light;
   display: flex;
   position: relative;
+  margin-left: -1rem; // because 1rem .site-content padding
+  margin-right: -1rem;
 
   &__container {
     @include wrap;
-    max-width: 640px;
+    max-width: 720px; // 640px;
     padding-top: 3rem;
     padding-bottom: 3rem;
     position: relative;
@@ -51,8 +56,8 @@
   ----------------------------------------------- */
 
   &--no-background {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem; // 2rem;
+    padding-bottom: 1rem; // 2rem;
   }
 
   /* Has background image
@@ -96,9 +101,13 @@
     }
     h1, p, span, a {
       color: $white;
-      text-shadow: 0 0 1rem rgba(0,0,0,.6);
+      // text-shadow: 0 0 1rem rgba(0,0,0,.6);
+      text-shadow: 1px 1px 1px #000;
+      font-weight: $bold;
       @include breakpoint($hero-s) {
-        text-shadow: 0 0 1rem rgba(0,0,0,.4);
+        // text-shadow: 0 0 1rem rgba(0,0,0,.4);
+        text-shadow: 1px 1px 1px #000;
+
       }
     }
   }

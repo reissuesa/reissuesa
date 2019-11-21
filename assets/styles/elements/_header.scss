@@ -2,13 +2,29 @@
  # Header
 ========================================================================== */
 
+.site-header__branding__title {
+  margin-top: $gap-semi-big;
+  margin-bottom: $gap-semi-big;
+  @include breakpoint($menu-hidden) {
+    padding-right: $gap-small;
+  }
+}
+
+@media (min-width: $query__medium) {
+  .site-header__branding__title {
+    margin-top: $gap-semi-big;
+    margin-bottom: $gap-semi-big;
+  }
+}
+
 .site-header {
-  padding-top: 1.25rem;
+  padding-top: 0; // 1.25rem;
   padding-bottom: 1.25rem;
+  padding-right: 1rem; //
   @include breakpoint($menu-visible) {
     align-items: center;
     display: flex;
-    padding-top: 1.75rem;
+    padding-top: 0; // 1.75rem;
     padding-bottom: 1.75rem;
   }
 
@@ -16,8 +32,9 @@
     @include wrap;
     @include breakpoint($menu-visible) {
       align-items: center;
-      display: flex;
-      justify-content: space-between;
+      // display: flex;
+      display: block;
+      // justify-content: space-between;
     }
   }
 
@@ -40,14 +57,42 @@
     }
 
     &__title {
-      display: block;
+      display: flex; // block
+      justify-content: center;
       line-height: 0;
       a {
         display: block;
         line-height: 0;
       }
     }
-
   }
+}
 
+/* Instagram Feed -plugin */
+
+#ig-top, #ig-bottom {
+	display: none;
+}
+
+@media (min-width: $menu-visible) {
+	#ig-top, #ig-bottom {
+    display: flex;
+    justify-content:center;
+    height: 10vw;
+    max-height: 192px;
+  }
+}
+
+/* Plugins: Smart Slider 3
+----------------------------------------------- */
+
+.n2-section-smartslider {
+  display: none;
+}
+
+@media screen and (min-width: $query__small) {
+  .n2-section-smartslider {
+    display: block;
+    margin-bottom: 40px;
+  }
 }

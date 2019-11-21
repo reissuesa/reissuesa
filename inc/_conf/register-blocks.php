@@ -2,7 +2,7 @@
 /**
  * Register: Blocks
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -17,7 +17,7 @@
  *
  * @return array $allowed_block_types list of block names
  */
-function aucor_starter_gutenberg_allowed_blocks($allowed_block_types, $post) {
+function reissuesa_gutenberg_allowed_blocks($allowed_block_types, $post) {
 
   $blocks = [];
 
@@ -82,4 +82,4 @@ function aucor_starter_gutenberg_allowed_blocks($allowed_block_types, $post) {
   return $blocks;
 
 }
-add_filter('allowed_block_types', 'aucor_starter_gutenberg_allowed_blocks', 10, 2);
+add_filter('allowed_block_types', 'reissuesa_gutenberg_allowed_blocks', 10, 2);

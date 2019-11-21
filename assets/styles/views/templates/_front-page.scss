@@ -1,3 +1,86 @@
 /* ==========================================================================
  # Front page
 ========================================================================== */
+
+
+.frontpage {
+  max-width: $max-width-l;
+  margin-left: auto;
+  margin-right: auto;
+
+  .posted-on {
+    display: block;
+    text-align: left;
+  }
+
+  h2 {
+    // font-size: 2.4rem;
+  }
+
+}
+
+.frontpage.firstpost {
+  margin-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  h2 {
+    margin-top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // font-size:2rem;
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+  .posted-on {
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
+
+  p {
+    color: #333;
+    text-decoration: none;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.instagram-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .instagram-wrapper {
+    display: block;
+  }
+}
+
+.frontpage.bio {
+  display: none;
+}
+
+@media screen and (min-width: 1250px) {
+  .frontpage.bio {
+    display: block;
+    height: 551px;
+    flex: 0 1 auto;
+    width: 350px;
+    margin-left: 40px;
+    margin-top: 74px;
+    background-color: #263238;
+    .footer-widgets {
+      margin-top: 0;
+      .widget {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

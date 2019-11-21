@@ -2,7 +2,7 @@
 /**
  * Function for numeric posts navigation
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -10,16 +10,16 @@
  *
  * Show pagination in numeric format instead of just link to next and previous page.
  *
- * @example aucor_starter_numeric_posts_nav()
- * @example aucor_starter_numeric_posts_nav($search, 'filter_p')
+ * @example reissuesa_numeric_posts_nav()
+ * @example reissuesa_numeric_posts_nav($search, 'filter_p')
  *
  * @param WP_Query $custom_query a query outside of main query
  * @param string   $custom_paged_var a custom string for paged variable
  */
-function aucor_starter_numeric_posts_nav($custom_query = null, $custom_paged_var = null) {
+function reissuesa_numeric_posts_nav($custom_query = null, $custom_paged_var = null) {
 
-  $next_label = aucor_starter_get_svg('caret-right') . '<span class="screen-reader-text">' . ask__('Navigation: Next') . '</span>';
-  $prev_label = aucor_starter_get_svg('caret-right') . '<span class="screen-reader-text">' . ask__('Navigation: Previous') . '</span>';
+  $next_label = reissuesa_get_svg('caret-right') . '<span class="screen-reader-text">' . ask__('Navigation: Next') . '</span>';
+  $prev_label = reissuesa_get_svg('caret-right') . '<span class="screen-reader-text">' . ask__('Navigation: Previous') . '</span>';
 
   global $wp_query;
 

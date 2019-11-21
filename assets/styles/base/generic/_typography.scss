@@ -16,13 +16,14 @@ html {
 
 p, .p {
   display: block;
-  font-size: .875rem;
+  font-size: 1rem; // .875rem;
+  // max-width: 720px;
   @include breakpoint($s) {
     font-size: 1rem;
   }
   font-weight: $normal;
-  line-height: $line-height;
-  margin: 0 0 1.5rem;
+  line-height: $line-height-big;
+  // margin: 0 0 1.5rem;
   &.lead {
     font-size: 1.125rem;
     @include breakpoint($s) {
@@ -37,23 +38,29 @@ p, .p {
 h1, .h1 {
   display: block;
   font-size: 2rem;
+  color: $black;
   @include breakpoint($s) {
     font-size: 2.5rem;
   }
-  font-weight: $bold;
+  font-weight: $normal; // $bold
   line-height: 1.125;
   margin: 0 0 2rem;
+  font-family: $font-title;
+  text-transform: uppercase;
 }
 
-h2, .h2 {
+h2, .h2, h3.teaser__header__title {
   display: block;
   font-size: 1.5rem;
+  color: $black;
   @include breakpoint($s) {
     font-size: 2rem;
   }
-  font-weight: $bold;
+  font-weight: $normal; // $bold
   line-height: 1.333333;
-  margin: 1.5rem 0;
+  margin: 2rem 0 2rem 0; // 1.5rem 0;
+  font-family: $font-title;
+  text-transform: uppercase;
 }
 
 h3, .h3 {
@@ -65,6 +72,7 @@ h3, .h3 {
   font-weight: $bold;
   line-height: $line-height;
   margin-bottom: 1.5rem;
+  margin-top: 2rem;
 }
 
 h4, .h4 {
@@ -89,6 +97,38 @@ h5, .h5 {
   margin-bottom: 0;
 }
 
+/* Sidebar
+----------------------------------------------- */
+.widget-area {
+
+  margin-top: 2.5rem;
+
+  h3.widget-title {
+    // margin-top: $gap-semi-big;
+    margin-bottom: $gap-medium;
+    font-size: 1.625rem; // 26px;
+    text-transform: uppercase;
+    // letter-spacing: 2px;
+    // background: $grey-light; // #f2f2f2;
+    color: $black;
+    padding: 12px 0;
+    font-weight: normal;
+    font-family: Montserrat, sans-serif;
+  }
+
+
+  img#reissuesa_home {
+    border-radius: 50%;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type :none;
+  }
+
+}
+
+
 /* Lists
 ----------------------------------------------- */
 
@@ -106,10 +146,35 @@ ul, ol {
 ----------------------------------------------- */
 
 a {
-  color: $blue;
+  color: $blue; // $pink;
+  text-decoration: none;
   &:hover, &:active, &:focus {
+    text-decoration: underline;
   }
 }
+
+.site-footer__branding__title, .site-footer__theme {
+  a, a:hover {
+    color: $grey-font-color;  // necessary, because added link in footer
+    text-decoration: none;
+  }
+}
+
+h2 {
+  a:hover, a:focus {
+    color: lighten($blue, 15%);
+    text-decoration: none;
+  }
+}
+
+/* Meta
+----------------------------------------------- */
+
+.posted-on {
+  color: $grey-font-color;
+}
+
+
 
 /* Accessibility
 ----------------------------------------------- */
@@ -150,3 +215,4 @@ input[type="submit"]:focus,
   outline: 1px dotted;
   outline-offset: -2px;
 }
+

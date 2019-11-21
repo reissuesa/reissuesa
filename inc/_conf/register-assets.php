@@ -6,7 +6,7 @@
  * Append content into <head> or footer.
  * Include favicons.
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -16,33 +16,33 @@ add_action('wp_enqueue_scripts', function() {
 
   // main css
   wp_enqueue_style(
-    'aucor_starter-style',
+    'reissuesa-style',
     get_template_directory_uri() . '/dist/styles/main.css',
     [],
-    aucor_starter_last_edited('css')
+    reissuesa_last_edited('css')
   );
 
   // critical js
   wp_enqueue_script(
-    'aucor_starter-critical-js',
+    'reissuesa-critical-js',
     get_template_directory_uri() . '/dist/scripts/critical.js',
     [],
-    aucor_starter_last_edited('js'),
+    reissuesa_last_edited('js'),
     false
   );
 
   // main js
   wp_enqueue_script(
-    'aucor_starter-js',
+    'reissuesa-js',
     get_template_directory_uri() . '/dist/scripts/main.js',
     [],
-    aucor_starter_last_edited('js'),
+    reissuesa_last_edited('js'),
     true
   );
 
   // remove gutenberg default stylesheets
-  wp_deregister_style('wp-block-library-theme');
-  wp_deregister_style('wp-block-library');
+  //wp_deregister_style('wp-block-library-theme');
+  // wp_deregister_style('wp-block-library');  //disablointi vaadittiin 5.3 päivityksen jälkeen, jotta näkyy galleria
 
   // comments
   if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -58,18 +58,18 @@ add_action('enqueue_block_editor_assets', function() {
 
   // editor styles
   wp_enqueue_style(
-    'aucor_starter-editor-gutenberg-style',
+    'reissuesa-editor-gutenberg-style',
     get_stylesheet_directory_uri() . '/dist/styles/editor-gutenberg.css',
     [],
-    aucor_starter_last_edited('css')
+    reissuesa_last_edited('css')
   );
 
   // editor scripts
   wp_enqueue_script(
-    'aucor_starter-editor-gutenberg-scripts',
+    'reissuesa-editor-gutenberg-scripts',
     get_stylesheet_directory_uri() . '/dist/scripts/editor-gutenberg.js',
     ['wp-i18n', 'wp-blocks', 'wp-dom-ready'],
-    aucor_starter_last_edited('js'),
+    reissuesa_last_edited('js'),
     true
   );
 
@@ -78,8 +78,8 @@ add_action('enqueue_block_editor_assets', function() {
   wp_register_style('wp-block-library', '' );
 
   // overwrite Core theme styles with empty styles
-  wp_deregister_style('wp-block-library-theme');
-  wp_register_style('wp-block-library-theme', '');
+  // wp_deregister_style('wp-block-library-theme');
+  // wp_register_style('wp-block-library-theme', '');
 
 }, 10);
 
@@ -90,10 +90,10 @@ add_action('admin_enqueue_scripts', function() {
 
   // admin.css
   wp_enqueue_style(
-    'aucor_starter-admin-css',
+    'reissuesa-admin-css',
     get_template_directory_uri() . '/dist/styles/admin.css',
     [],
-    aucor_starter_last_edited('css')
+    reissuesa_last_edited('css')
   );
 
 });
@@ -105,10 +105,10 @@ add_action('login_enqueue_scripts', function() {
 
   // wp-login.css
   wp_enqueue_style(
-    'aucor_starter-login-styles',
+    'reissuesa-login-styles',
     get_stylesheet_directory_uri() . '/dist/styles/wp-login.css',
     [],
-    aucor_starter_last_edited('css')
+    reissuesa_last_edited('css')
   );
 
 });
@@ -144,9 +144,9 @@ add_action('wp_footer', function() {
  *
  * Add favicons' <link> and <meta> tags here
  */
-function aucor_starter_favicons() {
+function reissuesa_favicons() {
 
 }
-add_action('wp_head',    'aucor_starter_favicons');
-add_action('admin_head', 'aucor_starter_favicons');
-add_action('login_head', 'aucor_starter_favicons');
+add_action('wp_head',    'reissuesa_favicons');
+add_action('admin_head', 'reissuesa_favicons');
+add_action('login_head', 'reissuesa_favicons');

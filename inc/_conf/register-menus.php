@@ -2,7 +2,7 @@
 /**
  * Register menu positions
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 add_action('after_setup_theme', function() {

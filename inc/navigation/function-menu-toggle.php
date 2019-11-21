@@ -2,7 +2,7 @@
 /**
  * Function for hamburger menu button
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -10,13 +10,13 @@
  *
  * Button with hamburger menu.
  *
- * @example aucor_starter_menu_toggle_btn('menu-toggle')
- * @example aucor_starter_menu_toggle_btn('menu-toggle', ['label' => 'Menu'])
+ * @example reissuesa_menu_toggle_btn('menu-toggle')
+ * @example reissuesa_menu_toggle_btn('menu-toggle', ['label' => 'Menu'])
  *
  * @param string $id HTML id for button element
  * @param array  $args list of arguments
  */
-function aucor_starter_menu_toggle_btn($id, $args = array()) {
+function reissuesa_menu_toggle_btn($id, $args = array()) {
 
   // set defaults
   $defaults = array(

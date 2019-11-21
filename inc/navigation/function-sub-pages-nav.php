@@ -2,7 +2,7 @@
 /**
  * Function for sub pages navigation
  *
- * @package aucor_starter
+ * @package reissuesa
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * Show hierarchial pages of current page.
  */
-function aucor_starter_sub_pages_navigation() {
+function reissuesa_sub_pages_navigation() {
 
   global $post;
   global $pretend_id;
@@ -47,7 +47,7 @@ function aucor_starter_sub_pages_navigation() {
 
   }
 
-  $walker = new aucor_starter_Pretendable_Walker();
+  $walker = new reissuesa_Pretendable_Walker();
 
   $list = wp_list_pages(array(
     'echo'        => 0,
@@ -100,7 +100,7 @@ function aucor_starter_sub_pages_navigation() {
  *
  * Current page item can be pretend to be whatever.
  */
-class aucor_starter_Pretendable_Walker extends Walker_Page {
+class reissuesa_Pretendable_Walker extends Walker_Page {
 
   /**
    * Starts the element output.

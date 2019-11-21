@@ -21,21 +21,13 @@
 
 }
 
-/* Only front-end
------------------------------------------------ */
-
-.wysiwyg .wp-block-embed {
-
-}
-
-/* Only back-end
------------------------------------------------ */
-
+//siirretty only back-endistä
 .editor-styles-wrapper .wp-block-embed.is-type-video {
   .wp-block-embed__wrapper {
     height: 0;
     overflow: hidden;
-    padding-top: 56.25%;
+    // padding-top: 56.25%;
+
     position: relative;
 
     iframe {
@@ -48,3 +40,19 @@
     }
   }
 }
+
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before {
+  padding-top: 0;
+}
+
+/* Only front-end
+----------------------------------------------- */
+
+.wysiwyg .wp-block-embed {
+
+}
+
+/* Only back-end
+----------------------------------------------- */
+
+
