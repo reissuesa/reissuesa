@@ -17,12 +17,12 @@ Reissuesa-teema on nähtävissä tuotantokäytössä Reissuesan matkablogissa os
 - fontteina on käytetty Google-fontteja Open Sans ja Montserrat
 - kommentit on muotoiltu isoilla pyöreillä (gr)avatareilla ja puhekuplilla
 
-Sivuston matkablogi.fi -suorituskykytestit 13.11.2019:
+Sivuston matkablogi.fi -suorituskykytestit 22.11.2019:
 
-- Google Page Insights 80/98 (mobiili/työpöytä)
-- GTMetrix 93/79 (PageSpeed/YSlow)
-- Pingdom Tools 83
-- WebPageTest 5 x A, 5.49 s täysin latautunut
+- Google Page Insights 89/90 (mobiili/työpöytä)
+- GTMetrix 94/80, latausaika 1.2s (PageSpeed/YSlow)
+- Pingdom Tools 84
+- WebPageTest 5 x A
 
 Teemanhyväksyntätesti Theme Check -pluginilla:
 
