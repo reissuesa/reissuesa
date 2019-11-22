@@ -90,7 +90,7 @@ function wpsites_disable_self_pingbacks( &$links ) {
 add_action( 'pre_ping', 'wpsites_disable_self_pingbacks' );
 
 // Google Api Key for Maps
-wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBmLJAE82NE8jXD-PYwYJ-2q5Td6mmg8TI');
+wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps/api/js?v=3.exp&key=XXX');
     wp_enqueue_script('aa_js_googlemaps_script');
 
 function my_acf_init() {
