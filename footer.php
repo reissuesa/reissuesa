@@ -42,8 +42,9 @@
   </footer><!-- #colophon -->
 
   <?php
-    echo do_shortcode('[instagram-feed num=5 cols=5 imagepadding=0 showfollow=false]');
-    echo do_shortcode('[instagram-feed num=8 cols=8 imagepadding=0 showfollow=false]');
+
+   // echo do_shortcode('[instagram-feed num=5 cols=5 imagepadding=0 showfollow=false]');
+   // echo do_shortcode('[instagram-feed num=8 cols=8 imagepadding=0 showfollow=false]');
   ?>
 
 

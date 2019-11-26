@@ -233,7 +233,7 @@ get_header(); ?>
 
       <?php
         if ( false === ( $query6 = get_transient ( 'query6' ))) :
-        $query6 = new WP_Query( array( 'category_name' => 'espanja-lansi-eurooppa-2', 'posts_per_page' => 3 ));
+        $query6 = new WP_Query( array( 'category_name' => 'espanja', 'posts_per_page' => 3 ));
         set_transient( 'query6', $query6, WEEK_IN_SECONDS);
       endif;
 
@@ -297,7 +297,7 @@ get_header(); ?>
 
         <?php
           if ( false === ( $query8 = get_transient ( 'query8' ))) :
-            $query8 = new WP_Query( array( 'category_name' => 'venaja-ita-eurooppa-2', 'posts_per_page' => 3 ));
+            $query8 = new WP_Query( array( 'category_name' => 'venaja', 'posts_per_page' => 3 ));
             set_transient( 'query8', $query8, WEEK_IN_SECONDS);
           endif;
 

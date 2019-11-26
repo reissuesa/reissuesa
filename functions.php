@@ -135,5 +135,5 @@ remove_action('template_redirect', 'rest_output_link_header', 11, 0);
 remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
+// add_filter('rest_enabled', '_return_false');
+// add_filter('rest_jsonp_enabled', '_return_false');
