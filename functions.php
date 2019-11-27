@@ -94,7 +94,7 @@ wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps
     wp_enqueue_script('aa_js_googlemaps_script');
 
 function my_acf_init() {
-  acf_update_setting('google_api_key', 'AIzaSyBmLJAE82NE8jXD-PYwYJ-2q5Td6mmg8TI');
+  acf_update_setting('google_api_key', 'XXX');
 }
 add_action('acf/init', 'my_acf_init');
 
