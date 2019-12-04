@@ -134,7 +134,7 @@ add_action('wp_head', function() {
 
 /**
  * Append to footer
- */
+ */ 
 add_action('wp_footer', function() {
 
 });

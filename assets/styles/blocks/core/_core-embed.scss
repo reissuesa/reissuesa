@@ -41,8 +41,13 @@
   }
 }
 
-.wp-embed-responsive .wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before {
+.wp-embed-responsive .wp-block-embed.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before, .wp-embed-responsive .wp-block-embed.wp-embed-aspect-4-3 .wp-block-embed__wrapper:before {
   padding-top: 0;
+}
+
+.wp-block-embed-instagram {
+  padding-top: $gap-medium;
+  padding-bottom: $gap-medium;
 }
 
 /* Only front-end

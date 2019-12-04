@@ -113,7 +113,6 @@ get_header(); ?>
       ?>
 
 
-
       <?php
             // Get the ID of a given category
             $category_id = get_cat_ID( 'luetuimmat' );

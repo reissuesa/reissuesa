@@ -17,7 +17,7 @@
  * Configuration
  */
 require_once 'inc/_conf/register-assets.php';
-//require_once 'inc/_conf/register-blocks.php';
+// require_once 'inc/_conf/register-blocks.php';
 require_once 'inc/_conf/register-image-sizes.php';
 require_once 'inc/_conf/register-menus.php';
 require_once 'inc/_conf/register-sidebars.php';
