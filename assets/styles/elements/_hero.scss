@@ -7,11 +7,15 @@
 
 .hero {
   align-items: center;
-  background: $grey-light;
+  background: #f4f6fa; // $grey-light;
   display: flex;
   position: relative;
   margin-left: -1rem; // because 1rem .site-content padding
   margin-right: -1rem;
+
+  a:hover {
+    text-decoration: none;
+  }
 
   &__container {
     @include wrap;
@@ -99,7 +103,7 @@
       content: ' ';
       display: table;
     }
-    h1, p, span, a {
+    h1, h2, p, span, a {
       color: $white;
       // text-shadow: 0 0 1rem rgba(0,0,0,.6);
       text-shadow: 1px 1px 1px #000;
@@ -107,7 +111,9 @@
       @include breakpoint($hero-s) {
         // text-shadow: 0 0 1rem rgba(0,0,0,.4);
         text-shadow: 1px 1px 1px #000;
-
+      }
+      &:hover {
+        text-decoration:none;
       }
     }
   }

@@ -4,6 +4,54 @@
 
 .page {
 
+  .site-header__container {
+    max-width: 1500px;
+  }
+
+  .feedzy-rss {
+    max-width: 1500px;
+
+    @include breakpoint($s) {
+     padding-left: $gap;
+     padding-right: $gap;
+    }
+    a {
+      color: #333;
+    }
+    .rss_item {
+      margin: .7rem;
+      border-bottom: 0 solid #999;
+      .rss_image {
+        margin: 0 0 .6rem 0;
+      }
+    }
+  }
+  .feedzy-rss ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    li.rss_item {
+      flex: 0 1 266px;
+      font-size: .95rem;
+      padding: 0 !important;
+      .title {
+        a {
+          color: #333;
+          font-size: 1.1rem;
+          line-height: 1.1;
+        }
+      }
+      small {
+        margin-top: .2rem;
+      }
+      p {
+        margin-top: .5rem;
+        font-size: .95rem;
+        line-height: 1.2;
+      }
+    }
+  }
 }
 
 .entry--page {
@@ -21,6 +69,10 @@
   margin-top: 2.5rem;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.wysiwyg .koh-lanta {
+  max-width: 1216px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -113,3 +165,50 @@
 }
 */
 
+/* start: results table with css grid */
+.travelblog-wrapper {
+  display: grid;
+  align-items: center;
+  // padding: 4px 10px 4px 10px;
+  grid-template-columns: [no] 25px [blogi] auto [information] 20px [instagram] 20px [facebook] 20px [twitter] 20px [video] 20px [pinterest] 20px;
+  grid-template-rows: minmax(30px, auto); //26.364
+  grid-column-gap: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.box.no {
+  justify-self: end;
+  color: grey;
+}
+
+.small {
+  font-size: 14px;
+  color: #444;
+}
+
+.box.empty a {
+  color: #f0f0f0;
+}
+
+.travelblog-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+@media (min-width: 700px) {
+  .wide {
+      display: inline;
+  }
+  .results-wrapper {
+      grid-column-gap: 10px;
+  }
+}
+
+.svg-inline--fa  {
+ //vertical-align: .001rem;
+}

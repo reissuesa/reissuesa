@@ -15,7 +15,7 @@
     // background-color: $grey-light;
   }
 
-  #primary-navigation, .site-header #social-navigation  {
+  #primary-navigation, #travelblog-navigation, .site-header #social-navigation  {
     display: flex;
     justify-content: center;
     // background-color: $grey-light;
@@ -28,7 +28,7 @@
   }
 }
 
-.primary-navigation__items {
+.primary-navigation__items, .travelblog-navigation__items {
 
   padding-top: 0;
 
@@ -386,7 +386,7 @@
 
 // why needed, from where 70rem
 @media (min-width: 70rem) and (min-width: 890px) {
-  .primary-navigation__items>li>span>a {
+  .primary-navigation__items>li>span>a, .travelblog-navigation__items>li>span>a {
     font-size: 0.875rem;
   }
 }

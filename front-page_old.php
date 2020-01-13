@@ -60,6 +60,11 @@ get_header(); ?>
         ?>
       </div>
 
+      <div class="frontpage bio">
+
+      <?php get_sidebar( 'frontpage' ); ?>
+
+      </div>
 
 
     </div><!-- flex-container-2 -->

@@ -14,11 +14,16 @@
 
   }
 
-  &.alignwide,
+  &.alignwide {
+    margin-top: $gap-big;
+    margin-bottom: 0;
+  }
+
   &.alignfull {
     margin-top: $gap-big;
     margin-bottom: $gap-big;
   }
+
 
   &.alignfull {
     margin-left: auto;

@@ -299,7 +299,7 @@
 	.rss-date,
 	.widget_rss cite {
     color: white;
-    .link_underline a {
+    .link_underline a, a.link_underline {
       text-decoration: underline;
     }
     .bio {
@@ -353,11 +353,11 @@ img#reissuesa_etusivu {
 }
 
 /* ==========================================================================
- # Widget stylings Visited
+ # Widget stylings Visited and Travelblog
 ========================================================================== */
 
-.visited {
-  .widget .textwidget p {
+.visited, .travelblog {
+  .widget .textwidget p, .widget .textwidget {
     font-size: 15px;
   }
 }

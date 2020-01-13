@@ -66,4 +66,16 @@ function my_register_sidebars() {
         'after_title'   => '</h3>',
     )
   );
+
+  register_sidebar(
+    array(
+        'id'            => 'travelblog',
+        'name'          => __( 'Travelblog page widgets', 'reissuesa'),
+        'description'   => __( 'Add Travelblog page widgets here.', 'reissuesa' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    )
+  );
 }

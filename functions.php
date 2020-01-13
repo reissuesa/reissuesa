@@ -90,11 +90,11 @@ function wpsites_disable_self_pingbacks( &$links ) {
 add_action( 'pre_ping', 'wpsites_disable_self_pingbacks' );
 
 // Google Api Key for Maps
-wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps/api/js?v=3.exp&key=XXX');
+wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps/api/js?v=3.exp&key=');
     wp_enqueue_script('aa_js_googlemaps_script');
 
 function my_acf_init() {
-  acf_update_setting('google_api_key', 'XXX');
+  acf_update_setting('google_api_key', '');
 }
 add_action('acf/init', 'my_acf_init');
 
@@ -137,3 +137,37 @@ remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
 // add_filter('rest_enabled', '_return_false');
 // add_filter('rest_jsonp_enabled', '_return_false');
+
+add_filter( 'template_include', 'reissuesa_load_custom_post_template' );
+function reissuesa_load_custom_post_template( $template ) {
+	if ( has_tag( 'koh-lanta' ) ) {
+		$template = TEMPLATEPATH . '/' . 'single-koh-lanta.php';
+	}
+
+	return $template;
+}
+
+
+
+// The shortcode function
+function reissuesa_google_map_koh_lanta() {
+
+  get_template_part('partials/content/google-map-koh-lanta');
+
+  // return $string;
+
+  }
+  add_shortcode('reissuesa_koh_lanta', 'reissuesa_google_map_koh_lanta');
+
+  // The shortcode function
+function reissuesa_google_map_visited_countries() {
+
+  $string .= get_template_part('partials/content/google-map-visited-countries');
+
+  return $string;
+
+  }
+  add_shortcode('reissuesa_visited_countries', 'reissuesa_google_map_visited_countries');
+
+
+  error_reporting(0);

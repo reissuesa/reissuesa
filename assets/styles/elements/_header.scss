@@ -8,6 +8,9 @@
   @include breakpoint($menu-hidden) {
     padding-right: $gap-small;
   }
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 @media (min-width: $query__medium) {
