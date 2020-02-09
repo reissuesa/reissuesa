@@ -15,6 +15,8 @@
   <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php wp_head(); ?>
   <META NAME="ROBOTS" CONTENT="INDEX, NOFOLLOW">
+  <meta property="og:image" content="https://www.matkablogi.fi/kuvat/Suomi%202015/Muut/matkailuvuosi_2015.jpg" />
+  <meta property="og:image:secure_url" content="https://www.matkablogi.fi/kuvat/Suomi%202015/Muut/matkailuvuosi_2015.jpg" />
 </head>
 
 <body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
@@ -42,7 +44,7 @@
         <span class="site-header__branding__title">
           <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" itemprop="headline">
             <span class="screen-reader-text"><?php bloginfo('name'); ?></span>
-            <div id="logo"><a href="/blogit/" target="_self">
+            <div id="logo"><a href="/blogit/">
               <h1 class="travelblog">Suomalaiset matkablogit</h1></a>
             </div>
           </a>

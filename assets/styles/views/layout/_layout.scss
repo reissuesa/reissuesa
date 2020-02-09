@@ -6,11 +6,17 @@
 .site-content {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 
 @media screen and (min-width: $query__medium) {
+
+  .site-content {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+  }
 
   .primary--index.frontpage {
     max-width: 100%;

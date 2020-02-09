@@ -41,8 +41,12 @@
         <span class="site-header__branding__title">
           <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" itemprop="headline">
             <span class="screen-reader-text"><?php bloginfo('name'); ?></span>
-            <img id="reissuesan-matkablogi-small" alt="Reissuesan matkablogi" src="https://www.matkablogi.fi/kuvat2/reissuesan_matkablogi_s.png">
+            <!-- <div id="logo"><a href="https://www.matkablogi.fi">
+              <h1 class="matkablogi">Reissuesan matkablogi</h1></a>
+            </div> -->
+           <img id="reissuesan-matkablogi-small" alt="Reissuesan matkablogi" src="https://www.matkablogi.fi/kuvat2/reissuesan_matkablogi_s.png">
             <img id="reissuesan-matkablogi-big" alt="Reissuesan matkablogi" src="https://www.matkablogi.fi/kuvat2/reissuesan_matkablogi_900.png">
+
           </a>
         </span>
 

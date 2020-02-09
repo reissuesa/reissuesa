@@ -5,7 +5,7 @@ get_header('travelblog'); ?>
 
   <?php // get_template_part('partials/content/hero-archive'); ?>
 
-<div class="travelblogs-wrapper">
+<div class="flex-container">
 
   <div id="primary" class="primary primary--index">
 
@@ -85,7 +85,7 @@ get_header('travelblog'); ?>
 
 
             ?>
-            <div class="box information"><a class="information" href="<?php echo $info; ?>"><i class="fas fa-info-circle" alt="Info" title="Info"></i></a></div>
+            <div class="box information"><a class="information" href="<?php echo $info; ?>"><i class="fas fa-info-circle" alt="Blogin esittelysivu" title="Blogin esittelysivu"></i></a></div>
             <?php if ( $instagram ) : ?>
               <div class="box instagram"><a class="instagram" href="<?php echo $instagram; ?>"><i class="fab fa-instagram fa-sm" alt="Instagram" title="Instagram"></i></a></div>
             <?php endif; ?>
@@ -104,14 +104,30 @@ get_header('travelblog'); ?>
           </div>
 
         <?php endwhile; ?>
+
+
+
         </div><!-- travelblog-container -->
+
+
+        <footer class="entry__footer">
+
+          <?php
+            wp_reset_postdata();
+          ?>
+
+          <?php reissuesa_social_share_buttons(); ?>
+
+        </footer>
 
 
 
     </main><!-- #main -->
   </div><!-- #primary -->
 
-</div> <!-- .travelblogs-wrapper -->
+  <?php // get_sidebar('travelblog2'); ?>
+
+</div> <!-- flex-container -->
 
 <?php
 get_footer('travelblog');

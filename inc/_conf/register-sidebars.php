@@ -70,8 +70,20 @@ function my_register_sidebars() {
   register_sidebar(
     array(
         'id'            => 'travelblog',
-        'name'          => __( 'Travelblog page widgets', 'reissuesa'),
-        'description'   => __( 'Add Travelblog page widgets here.', 'reissuesa' ),
+        'name'          => __( 'Travelblog page widgets (down)', 'reissuesa'),
+        'description'   => __( 'Add Travelblog page widgets (down) here.', 'reissuesa' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    )
+  );
+
+  register_sidebar(
+    array(
+        'id'            => 'travelblog2',
+        'name'          => __( 'Travelblog page widgets (right)', 'reissuesa'),
+        'description'   => __( 'Add Travelblog page widgets (right) here.', 'reissuesa' ),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3 class="widget-title">',

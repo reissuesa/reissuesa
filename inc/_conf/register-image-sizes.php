@@ -44,6 +44,7 @@ add_action('after_setup_theme', function() {
   add_image_size('hero_sm',   800,  500, true);  // (default starter) hero mobile 8:5
   add_image_size('wide',     1216, 2432, false); // (default starter) gutenberg wide, relational to large
   add_image_size('wide_xl',  1824, 3648, false); // (default starter) gutenberg wide, relational to large
+  add_image_size('og_facebook',  1200, 900);
 
   // enable support for post thumbnails
   add_theme_support('post-thumbnails');

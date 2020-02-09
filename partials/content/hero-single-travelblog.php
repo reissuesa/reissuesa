@@ -55,7 +55,7 @@ if (!empty($image)) {
       <div class="hero__background__image">
         <?php echo $image; ?>
       </div>
-      <div class="hero__background__dimming"></div>
+      <!-- <div class="hero__background__dimming_no"></div> -->
     </div>
   <?php endif; ?>
 

@@ -90,7 +90,7 @@ function wpsites_disable_self_pingbacks( &$links ) {
 add_action( 'pre_ping', 'wpsites_disable_self_pingbacks' );
 
 // Google Api Key for Maps
-wp_register_script('aa_js_googlemaps_script',  'https://maps.googleapis.com/maps/api/js?v=3.exp&key=');
+wp_register_script('aa_js_googlemaps_script',  '');
     wp_enqueue_script('aa_js_googlemaps_script');
 
 function my_acf_init() {
@@ -138,15 +138,38 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 // add_filter('rest_enabled', '_return_false');
 // add_filter('rest_jsonp_enabled', '_return_false');
 
+/*
 add_filter( 'template_include', 'reissuesa_load_custom_post_template' );
 function reissuesa_load_custom_post_template( $template ) {
-	if ( has_tag( 'koh-lanta' ) ) {
+	if ( is_single (array(53566,53577,393))) {
 		$template = TEMPLATEPATH . '/' . 'single-koh-lanta.php';
 	}
-
 	return $template;
 }
 
+add_filter( 'template_include', 'reissuesa_load_custom_post_template' );
+function reissuesa_load_custom_post_template( $template2 ) {
+	if ( is_single(55027)) {
+		$template2 = TEMPLATEPATH . '/' . 'single-55027.php';
+  }
+	return $template2;
+}
+*/
+
+function my_template() {
+  if (is_single()) {
+      global $post;
+      if ($post->ID == 53566 || $post->ID == 53577 || $post->ID == 393) {
+          include (TEMPLATEPATH . '/single-koh-lanta.php');
+          exit;
+      }
+      if ($post->ID == 55027) {
+        include (TEMPLATEPATH . '/single-55027.php');
+        exit;
+    }
+  }
+}
+add_action('template_redirect', 'my_template');
 
 
 // The shortcode function
@@ -171,3 +194,21 @@ function reissuesa_google_map_visited_countries() {
 
 
   error_reporting(0);
+
+
+
+  function bweb_feedzy_thumb_aspect_ratio( $sizes, $feedURL ) {
+    $sizes = array(
+        'width' => $sizes['width'] * (4/3),
+        'height' => $sizes['height']
+    );
+    return $sizes;
+}
+add_filter( 'feedzy_thumb_sizes', 'bweb_feedzy_thumb_aspect_ratio', 10, 2 );
+
+
+function set_custom_facebook_image_size( $img_size ) {
+  return 'og_facebook';
+}
+add_filter( 'wpseo_opengraph_image_size', 'set_custom_facebook_image_size' );
+

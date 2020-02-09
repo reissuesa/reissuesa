@@ -21,6 +21,7 @@ get_header('travelblog'); ?>
   $pinterest = get_field('pinterest');
   $rss = get_field('rss');
   $tekniikka = get_field('tekniikka');
+  $otsikkokuva = get_field('otsikkokuva');
   $tags = get_meta_tags($blogin_osoite);
   if(!empty($tags['description'])) {
         $blogin_kuvaus = $tags['description'];
@@ -30,6 +31,9 @@ get_header('travelblog'); ?>
 
   $graph = OpenGraph::fetch($blogin_osoite);
   $image = $graph->image;
+  if($otsikkokuva) {
+    $image = $otsikkokuva;
+  }
   // echo $image;
 
   /*
@@ -99,7 +103,7 @@ foreach ( $descriptions as $description_node ) {
         <div class="hero__background__image">
           <?php echo '<img src="' . $image . '">'; ?>
         </div>
-        <div class="hero__background__dimming"></div>
+        <!--<div class="hero__background__dimming"></div>-->
       </div>
     <?php endif; ?>
 
@@ -184,7 +188,7 @@ foreach ( $descriptions as $description_node ) {
 
             <?php
               if($tekniikka == "") {
-                $code = '[feedzy-rss feeds="' . $rss . '" max="10" feed_title="no" refresh="6_hours" target="_self" follow="no" summary="yes" summarylength="200" thumb="yes" default="https://www.matkablogi.fi/wp-content/uploads/2013/10/tausta_twitteriin2-400x250.jpg"  size="225" meta="author, date, tz=local"]';
+                $code = '[feedzy-rss feeds="' . $rss . '" max="10" feed_title="no" refresh="6_hours" target="_self" follow="no" summary="yes" summarylength="200" thumb="yes" default="https://www.matkablogi.fi/wp-content/uploads/2013/10/tausta_twitteriin2-400x250.jpg"  size="200" meta="author, date, tz=local"]';
               }
             ?>
 

@@ -39,6 +39,14 @@ $line-height-big:     1.75;
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/OpenSans-Light.woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
   font-weight: 700;
   src: url('../fonts/OpenSans-Bold.woff');
   font-display: swap;

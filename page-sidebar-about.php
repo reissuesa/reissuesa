@@ -42,4 +42,4 @@ get_header(); ?>
   </div> <!-- #flex-container -->
 
 <?php
-get_footer();
+get_footer(); 

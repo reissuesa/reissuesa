@@ -75,6 +75,10 @@
   max-width: 1216px;
 }
 
+.wysiwyg .kazakstan-georgia {
+  max-width: 1216px;  
+}
+
 @media only screen and (min-width: 768px) {
   #google-container {
     height: 600px;
@@ -165,7 +169,18 @@
 }
 */
 
+.travelblog-wrapper {
+  display: grid;
+  align-items: center;
+  // padding: 4px 10px 4px 10px;
+  grid-template-columns: [no] 25px [blogi] auto [information] 14px [instagram] 11px [facebook] 12px [twitter] 12px [video] 16px [pinterest] 12px;
+  grid-template-rows: minmax(30px, auto); //26.364
+  grid-column-gap: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
 /* start: results table with css grid */
+@media screen and (min-width: $query__medium) {
 .travelblog-wrapper {
   display: grid;
   align-items: center;
@@ -174,6 +189,7 @@
   grid-template-rows: minmax(30px, auto); //26.364
   grid-column-gap: 10px;
   border-bottom: 1px solid lightgrey;
+  }
 }
 
 .box.no {
@@ -194,8 +210,8 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0;
+  padding-right: 0;
   font-size: 15px;
   line-height: 1.2;
 }
