@@ -1,4 +1,4 @@
-Reissuesa on Reissuesan matkablogille kehitetty WordPress-teema. Teeman tekeminen oli osa Esa Isopahkalan TAMK:n opinnäytetyötä <a href="https://www.theseus.fi/handle/10024/334323">WordPress-aloitusteeman valinta ja kehittäminen</a>.
+Reissuesa on Reissuesan matkablogille kehitetty WordPress-teema. Teeman tekeminen oli osa Esa Isopahkalan TAMK:n opinnäytetyötä <a href="https://www.theseus.fi/handle/10024/334323">WordPress-aloitusteeman valinta</a>.
 
 Aloitusteemana on käytetty <a href="https://github.com/aucor/aucor-starter">Aucor Starteria</a>, johon on lisätty CSS Grid -tuki Digitoimisto Duden aloitusteemasta <a href="https://github.com/digitoimistodude/air-light">Air Lightista</a>.
 
