@@ -29,26 +29,22 @@ Teemanhyväksyntätesti Theme Check -pluginilla:
 - WordPress.org, vaatimukset täytetään, mutta 10 varoitusta
 - ThemeForest, vaatimukset täytetään, mutta 7 varoitusta
 
-Reissuesan matkablogissa on käytössä 17 ilmaista pluginia:
+Reissuesan matkablogissa on käytössä seuraavat ilmaiset pluginit:
 
 - Akismet-roskaviestisuodatus
 - AMP (AMP-projektin virallinen plugin)
-- Aucor Core (Aucor Starterin toiminnallisuuden säätely)
+- Aucor Core (Aucor Starterin toiminnallisuuden säätely, suomen kieli)
 - Envira Gallery Lite (galleriasovellus käytössä joissakin vanhoissa postauksissa)
-- Featured Images in RSS for Mailchimp & Other Email (lisää otsikkokuvan Feedburnerin RSS:ään)
 - Glue for Yoast SEO & AMP (varmistaa AMP-pluginin käyttävän Yoast-pluginin metadataa)
-- Regenerate thumbnails (käytössä vain kun pikkukuvien määrityksiä muutetaan)
-- RS FeedBurner (WordPressin natiivin RSS:n sijaan käyttöön monipuolisempi Google FeedBurner)
+- RS FeedBurner (WordPressin natiivin RSS:n sijaan käyttöön Google FeedBurner)
 - Site Kit by Google (Googlen palveluiden integrointi)
 - Smart Slider 3 (etusivun kuvakarusellin toteutus)
-- Smash Balloon Instagram Feed (etusivun Instagram-tilin mainoksen totetutus
+- Smash Balloon Instagram Feed (etusivun Instagram-tilin mainoksen totetutus)
 - Subscribe to Comments Reloaded (kommentoijat voivat tilata ilmoitukset uusista kommenteista)
 - Ultimate Tag Cloud Widget (alapalkin muokattava avainsanapilvi)
-- WebP Express (nopeammin latautuvat webp-kuvat käyttöön)
-- WordPress Related Posts (aiheeseen liittyvien postausten linkit)
 - WP Super Cache (välimuisti nopeuttamaan sivunlatausta)
 - Yoast SEO (hakukoneoptimointi, sisältää myös sivukartan)
 
-Käytössä on myös yksi maksullinen plugin:
+Käytössä on yksi maksullinen plugin:
 
 - Advanced Custom Fields PRO (kartta käydyt maat -sivulla)
