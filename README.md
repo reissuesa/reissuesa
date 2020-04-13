@@ -14,7 +14,7 @@ Reissuesa-teema on nähtävissä tuotantokäytössä Reissuesan matkablogissa os
 - yksittäisten postausten edellinen ja seuraava postaus -linkit varustettu pikkukuvilla
 - kuvien näyttämisessä on Lazy Loading aktivoituna
 - käyttöliittymässä kaikki suomen kielellä jos kieleksi valittu suomi (muuten englanniksi)
-- fontteina on käytetty Google-fontteja Open Sans ja Montserrat
+- fontteina on käytetty Google-fontteja Open Sans ja Montserrat (paikallisesti ladattuna)
 - kommentit on muotoiltu isoilla pyöreillä (gr)avatareilla ja puhekuplilla
 
 Sivuston matkablogi.fi -suorituskykytestit 22.11.2019:
