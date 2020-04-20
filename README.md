@@ -48,3 +48,5 @@ Reissuesan matkablogissa on käytössä seuraavat ilmaiset pluginit:
 Käytössä on yksi maksullinen plugin:
 
 - Advanced Custom Fields PRO (kartta käydyt maat -sivulla)
+
+PS. Olen tehnyt Aucor Starterin pohjalta myös matkopas.orgin teeman (<a href="https://www.matkaopas.org/laspalmas/">Las Palmas -opas</a>, <a href="https://www.matkaopas.org/pietari/">Pietari-matkaopas</a>).
