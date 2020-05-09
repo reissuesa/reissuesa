@@ -1,4 +1,4 @@
-Reissuesa on Reissuesan matkablogille kehitetty WordPress-teema. Teeman tekeminen oli osa Esa Isopahkalan TAMK:n opinnäytetyötä WordPress-aloitusteeman valinta ja kehittäminen.
+Reissuesa on Reissuesan matkablogille kehitetty WordPress-teema. Teeman tekeminen oli osa Esa Isopahkalan TAMK:n opinnäytetyötä <a href="https://www.theseus.fi/handle/10024/334323">WordPress-aloitusteeman valinta</a>.
 
 Aloitusteemana on käytetty <a href="https://github.com/aucor/aucor-starter">Aucor Starteria</a>, johon on lisätty CSS Grid -tuki Digitoimisto Duden aloitusteemasta <a href="https://github.com/digitoimistodude/air-light">Air Lightista</a>.
 
@@ -14,7 +14,7 @@ Reissuesa-teema on nähtävissä tuotantokäytössä Reissuesan matkablogissa os
 - yksittäisten postausten edellinen ja seuraava postaus -linkit varustettu pikkukuvilla
 - kuvien näyttämisessä on Lazy Loading aktivoituna
 - käyttöliittymässä kaikki suomen kielellä jos kieleksi valittu suomi (muuten englanniksi)
-- fontteina on käytetty Google-fontteja Open Sans ja Montserrat
+- fontteina on käytetty Google-fontteja Open Sans ja Montserrat (paikallisesti ladattuna)
 - kommentit on muotoiltu isoilla pyöreillä (gr)avatareilla ja puhekuplilla
 
 Sivuston matkablogi.fi -suorituskykytestit 22.11.2019:
@@ -29,26 +29,24 @@ Teemanhyväksyntätesti Theme Check -pluginilla:
 - WordPress.org, vaatimukset täytetään, mutta 10 varoitusta
 - ThemeForest, vaatimukset täytetään, mutta 7 varoitusta
 
-Reissuesan matkablogissa on käytössä 17 ilmaista pluginia:
+Reissuesan matkablogissa on käytössä seuraavat ilmaiset pluginit:
 
 - Akismet-roskaviestisuodatus
 - AMP (AMP-projektin virallinen plugin)
-- Aucor Core (Aucor Starterin toiminnallisuuden säätely)
+- Aucor Core (Aucor Starterin toiminnallisuuden säätely, suomen kieli)
 - Envira Gallery Lite (galleriasovellus käytössä joissakin vanhoissa postauksissa)
-- Featured Images in RSS for Mailchimp & Other Email (lisää otsikkokuvan Feedburnerin RSS:ään)
 - Glue for Yoast SEO & AMP (varmistaa AMP-pluginin käyttävän Yoast-pluginin metadataa)
-- Regenerate thumbnails (käytössä vain kun pikkukuvien määrityksiä muutetaan)
-- RS FeedBurner (WordPressin natiivin RSS:n sijaan käyttöön monipuolisempi Google FeedBurner)
+- RS FeedBurner (WordPressin natiivin RSS:n sijaan käyttöön Google FeedBurner)
 - Site Kit by Google (Googlen palveluiden integrointi)
 - Smart Slider 3 (etusivun kuvakarusellin toteutus)
-- Smash Balloon Instagram Feed (etusivun Instagram-tilin mainoksen totetutus
+- Smash Balloon Instagram Feed (etusivun Instagram-tilin mainoksen totetutus)
 - Subscribe to Comments Reloaded (kommentoijat voivat tilata ilmoitukset uusista kommenteista)
 - Ultimate Tag Cloud Widget (alapalkin muokattava avainsanapilvi)
-- WebP Express (nopeammin latautuvat webp-kuvat käyttöön)
-- WordPress Related Posts (aiheeseen liittyvien postausten linkit)
 - WP Super Cache (välimuisti nopeuttamaan sivunlatausta)
 - Yoast SEO (hakukoneoptimointi, sisältää myös sivukartan)
 
-Käytössä on myös yksi maksullinen plugin:
+Käytössä on yksi maksullinen plugin:
 
 - Advanced Custom Fields PRO (kartta käydyt maat -sivulla)
+
+PS. Olen tehnyt Aucor Starterin pohjalta myös matkopas.orgin teeman (<a href="https://www.matkaopas.org/laspalmas/">Las Palmas -opas</a>, <a href="https://www.matkaopas.org/pietari/">Pietari-matkaopas</a>).
