@@ -2,7 +2,21 @@
  # Single
 ========================================================================== */
 
-.single-post {
+.single {
+
+  .entry {
+
+    &__footer {
+
+      .cat-links, .tags-links, .social-share {
+        @include wrap;
+        @include narrow-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+  }
 
 }
 
@@ -143,4 +157,40 @@ a.information {
     padding-right: 0.25rem;
     padding-left: 0.25rem;
   }
+}
+
+
+// Related Posts Plugin
+
+.wysiwyg .rpbt_shortcode, .entry__footer .rpbt_shortcode {
+  padding-top: $gap-tiny;
+
+  /*
+  h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  */
+
+  figure {
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 360px;
+      height: 202px;
+    }
+
+    figcaption {
+      position: absolute;
+      left: $gap-small;
+      bottom: $gap-small;
+      color: $white;
+      max-width: 340px;
+      text-shadow: 1px 1px 1px $black;
+      //font-size: 1.125rem;
+      font-weight: $bold;
+    }
+  }
+
 }

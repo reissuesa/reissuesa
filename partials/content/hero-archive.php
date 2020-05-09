@@ -31,7 +31,7 @@ if (is_singular() && get_post_type() === 'post') {
   $meta = reissuesa_get_posted_on();
 }
 
-// background
+// background 
 
 if (is_category( array('Aasia', 'Kaakkois-Aasia', 'Thaimaa') ) || is_tag ( array('aasia', 'kaakkois-aasia', 'thaimaa', 'phuket') )) {
   $image = reissuesa_get_image(43303, 'hero', ['lazyload' => 'False']);

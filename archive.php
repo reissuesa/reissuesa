@@ -23,6 +23,9 @@ get_header(); ?>
 
     <main id="main" class="main">
 
+    <?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<p id="breadcrumbs">', '</p>');} ?>
+
+
       <div class="teaser-container">
         <?php while (have_posts()) : the_post(); ?>
           <div class="teaser__card">

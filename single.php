@@ -20,6 +20,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class('entry entry--post'); ?>>
 
           <div class="entry__content wysiwyg">
+            <?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<p id="breadcrumbs">', '</p>');} ?>
             <?php the_content(); ?>
 
           </div>
@@ -27,6 +28,8 @@ get_header(); ?>
           <footer class="entry__footer">
             <?php reissuesa_entry_footer(); ?>
             <?php reissuesa_social_share_buttons(); ?>
+
+            <?php echo do_shortcode('[related_posts_by_tax posts_per_page="6" format="thumbnails" image_size="medium" title="Lisää samasta aiheesta"]'); ?>
 
             <?php
               if ( comments_open() || get_comments_number() ) :
@@ -40,11 +43,11 @@ get_header(); ?>
               // reissuesa_post_navigation();
             ?>
 
-            <?php
+<?php
             // navigation with thumbs
             //Get the thumnail url of the previous and next post
-            $prevThumb = get_the_post_thumbnail_url( get_previous_post(), 'thumbnail' );
-            $nextThumb = get_the_post_thumbnail_url( get_next_post(), 'thumbnail' );
+            $prevThumb = get_the_post_thumbnail_url( get_previous_post(), 'large' );
+            $nextThumb = get_the_post_thumbnail_url( get_next_post(), 'large' );
 
             //Get the links to the Previous and Next Post
             $previous_link_url = get_permalink( get_previous_post() );
@@ -56,12 +59,21 @@ get_header(); ?>
             echo '<nav class="navigation thumb-navigation">';
 
             if (get_previous_post()) {
-              echo '<div class="postnav-thumb-previous"><div class="postnav-thumb-previous-img"><a href="'. $previous_link_url . '"><img class="postnav-img-previous" src="' . $prevThumb . '"></div><div class="postnav-thumb-previous-caption">Edellinen postaus<br><span class="postnav-thumb-title">' . $prevTitle . '</span></a></div></div>';
+              echo '<div class="postnav-thumb-previous">
+                      <figure class="postnav-thumb-previous-img"><a href="'. $previous_link_url . '"><img class="postnav-img-previous" src="' . $prevThumb . '">
+                        <figcaption class="postnav-thumb-previous-caption">Vanhempi postaus<br><span class="postnav-thumb-title">' . $prevTitle . '</span></a></figcaption>
+                      </figure>
+                    </div>';
             }
 
             if (get_next_post()) {
-              echo '<div class="postnav-thumb-next"><div class="postnav-thumb-next-caption"><a href="'. $next_link_url . '">Seuraava postaus<br><span class="postnav-thumb-title">' .$nextTitle . '</span></div><div class="postnav-thumb-next-img"><img class="postnav-img-next" src="' . $nextThumb . '"></a></div></div>';
+              echo '<div class="postnav-thumb-next">
+                      <figure class="postnav-thumb-previous-img"><a href="'. $next_link_url . '"><img class="postnav-img-next" src="' . $nextThumb . '">
+                        <figcaption class="postnav-thumb-next-caption">Uudempi  postaus<br><span class="postnav-thumb-title">' . $nextTitle . '</span></a></figcaption>
+                      </figure>
+                    </div>';
             }
+
             ?>
             </nav>
 

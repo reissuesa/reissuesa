@@ -23,6 +23,7 @@
       min-width: 2rem;
       padding: .5rem;
       text-decoration: none;
+      border-radius: 50%;
       &:hover, &:focus, &:active {
         background: $grey;
       }

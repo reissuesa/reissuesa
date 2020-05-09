@@ -20,7 +20,13 @@ get_header(); ?>
 
   <?php get_template_part('partials/content/hero'); ?>
 
-  <div class="flex-container">
+  <?php
+    if (!is_paged() ) {
+      get_sidebar('promo');
+    }
+  ?>
+
+  <div class="flex-container frontpage">
 
   <div id="primary" class="primary primary--index frontpage">
 
@@ -55,8 +61,11 @@ get_header(); ?>
 
         <?php
           echo '<a href="' . get_permalink() . '">';
-          the_content();
+          echo get_the_post_thumbnail();
           echo '</a>';
+          echo '<p>' . get_the_excerpt() . '</p>';
+          // the_content();
+
         ?>
       </div>
 
@@ -73,7 +82,7 @@ get_header(); ?>
 
       <h2><a href="<?php echo get_permalink( get_option( 'page_for_posts' )); ?>">Uusimmat</a></h2>
 
-      <div class="teaser-container">
+      <div class="teaser-container frontpage">
 
       <?php
 
@@ -81,7 +90,7 @@ get_header(); ?>
           $args = array(
             'post_type'              => array( 'post' ),
             'nopaging'               => false,
-            'posts_per_page'         => '6',
+            'posts_per_page'         => '4',
             'offset'                 => '1',
           );
           $query2 = new WP_Query( $args );
@@ -108,40 +117,6 @@ get_header(); ?>
       ?>
 
 
-      <?php
-            // Get the ID of a given category
-            $category_id = get_cat_ID( 'luetuimmat' );
-
-            // Get the URL of this category
-            $category_link = get_category_link( $category_id );
-        ?>
-
-
-      <!-- Print a link to this category -->
-      <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Luetuimmat">30 luetuinta</a></h2>
-
-      <div class="teaser-container ">
-
-        <?php
-        if ( false === ( $query3 = get_transient ( 'query3' ))) :
-          $query3 = new WP_Query( array( 'category_name' => 'luetuimmat', 'posts_per_page' => 3 ));
-          set_transient( 'query3', $query3, WEEK_IN_SECONDS);
-        endif;
-
-          // The Loop
-          while ( $query3->have_posts() ) {
-              $query3->the_post();
-        ?>
-          <div class="teaser__card">
-            <?php get_template_part('partials/content/teaser-front'); ?>
-          </div>
-          <?php } ?>
-
-      </div>
-
-      <?php
-        wp_reset_postdata();
-      ?>
 
       <?php
           // Get the ID of a given category
@@ -154,11 +129,11 @@ get_header(); ?>
       <!-- Print a link to this category -->
       <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Aasia">Aasia</a></h2>
 
-      <div class="teaser-container">
+      <div class="teaser-container frontpage">
 
       <?php
         if ( false === ( $query4 = get_transient ( 'query4' ))) :
-          $query4 = new WP_Query( array( 'category_name' => 'aasia', 'posts_per_page' => 3 ));
+          $query4 = new WP_Query( array( 'category_name' => 'aasia', 'posts_per_page' => 2 ));
           set_transient( 'query4', $query4, WEEK_IN_SECONDS);
         endif;
 
@@ -189,11 +164,11 @@ get_header(); ?>
       <!-- Print a link to this category -->
       <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Amerikka">Amerikka</a></h2>
 
-      <div class="teaser-container">
+      <div class="teaser-container frontpage">
 
       <?php
         if ( false === ( $query5 = get_transient ( 'query5' ))) :
-          $query5 = new WP_Query( array( 'category_name' => 'amerikka', 'posts_per_page' => 3 ));
+          $query5 = new WP_Query( array( 'category_name' => 'amerikka', 'posts_per_page' => 2 ));
           set_transient( 'query5', $query5, WEEK_IN_SECONDS);
         endif;
 
@@ -223,11 +198,11 @@ get_header(); ?>
       <!-- Print a link to this category -->
       <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Espanja">Espanja</a></h2>
 
-      <div class="teaser-container">
+      <div class="teaser-container frontpage">
 
       <?php
         if ( false === ( $query6 = get_transient ( 'query6' ))) :
-        $query6 = new WP_Query( array( 'category_name' => 'espanja', 'posts_per_page' => 3 ));
+        $query6 = new WP_Query( array( 'category_name' => 'espanja', 'posts_per_page' => 2 ));
         set_transient( 'query6', $query6, WEEK_IN_SECONDS);
       endif;
 
@@ -257,11 +232,11 @@ get_header(); ?>
       <!-- Print a link to this category -->
       <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Suomi">Suomi</a></h2>
 
-      <div class="teaser-container">
+      <div class="teaser-container frontpage">
 
         <?php
           if ( false === ( $suomi = get_transient ( 'suomi' ))) :
-            $suomi = new WP_Query( array( 'category_name' => 'suomi', 'posts_per_page' => 3 ));
+            $suomi = new WP_Query( array( 'category_name' => 'suomi', 'posts_per_page' => 2 ));
             set_transient( 'suomi', $suomi, WEEK_IN_SECONDS);
           endif;
 
@@ -287,11 +262,11 @@ get_header(); ?>
 
       <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Venäjä">Venäjä</a></h2>
 
-      <div class="teaser-container grey">
+      <div class="teaser-container grey frontpage">
 
         <?php
           if ( false === ( $query8 = get_transient ( 'query8' ))) :
-            $query8 = new WP_Query( array( 'category_name' => 'venaja', 'posts_per_page' => 3 ));
+            $query8 = new WP_Query( array( 'category_name' => 'venaja', 'posts_per_page' => 2 ));
             set_transient( 'query8', $query8, WEEK_IN_SECONDS);
           endif;
 
@@ -310,6 +285,47 @@ get_header(); ?>
         wp_reset_postdata();
       ?>
 
+
+
+<?php
+            // Get the ID of a given category
+            $category_id = get_cat_ID( 'luetuimmat' );
+
+            // Get the URL of this category
+            $category_link = get_category_link( $category_id );
+        ?>
+
+
+      <!-- Print a link to this category -->
+      <h2><a href="<?php echo esc_url( $category_link ); ?>" title="Luetuimmat">30 luetuinta</a></h2>
+
+      <div class="teaser-container frontpage">
+
+        <?php
+        if ( false === ( $query3 = get_transient ( 'query3' ))) :
+          $query3 = new WP_Query( array( 'category_name' => 'luetuimmat', 'posts_per_page' => 2 ));
+          set_transient( 'query3', $query3, WEEK_IN_SECONDS);
+        endif;
+
+          // The Loop
+          while ( $query3->have_posts() ) {
+              $query3->the_post();
+        ?>
+          <div class="teaser__card">
+            <?php get_template_part('partials/content/teaser-front'); ?>
+          </div>
+          <?php } ?>
+
+      </div>
+
+      <?php
+        wp_reset_postdata();
+      ?>
+
+
+
+
+
       <?php
           }
         ?>
@@ -319,7 +335,7 @@ get_header(); ?>
     </main><!-- #main -->
   </div><!-- #primary -->
 
-
+  <?php get_sidebar('primary'); ?>
 
  </div> <!-- #flex-container -->
 

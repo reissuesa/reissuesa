@@ -90,4 +90,16 @@ function my_register_sidebars() {
         'after_title'   => '</h3>',
     )
   );
+  /* Repeat register_sidebar() code for additional sidebars. */
+  register_sidebar(
+    array(
+        'id'            => 'promo',
+        'name'          => __( 'Promo Widgets', 'nomadic-esa' ),
+        'description'   => __( 'Add promo widgets here.', 'nomadic-esa'),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    )
+  );
 }

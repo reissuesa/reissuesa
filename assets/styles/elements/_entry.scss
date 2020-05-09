@@ -125,45 +125,39 @@
   }
   .postnav-thumb-previous {
     margin-bottom: 0;
+    padding-right: $gap;
   }
 }
 
 .postnav-thumb-previous, .postnav-thumb-next {
   display: flex;
+  .postnav-thumb-previous-img, .postnav-thumb-next-img {
+    position: relative;
+  }
   a {
     text-decoration: none;
-    color: $base-font-color;
-    letter-spacing: -0.05em;
+    color: $white;
   }
   .postnav-thumb-title {
-    font-weight: 600;
+    font-weight: $bold;
   }
   img {
-    border-radius: 2%;
+    width: 590px; // 400px; // 360px;
+    height: 393px; // 240px; // 202px;
+    object-fit: cover;
   }
-  .postnav-thumb-previous-img, .postnav-thumb-previous-caption, .postnav-thumb-next-img, .postnav-thumb-next-caption {
-    width: 50%
-  }
+
 }
 
-@media screen and (min-width: $query__medium) {
-  .postnav-thumb-previous, .postnav-thumb-next {
-    width: 50%;
-  }
-}
-
-.postnav-thumb-previous-caption {
+.postnav-thumb-previous-caption, .postnav-thumb-next-caption {
+  position: absolute;
   align-self: center;
-  padding-left: .75rem;
-  padding-bottom: .5rem;
+  left: .75rem;
+  bottom: .75rem;
+  max-width: 340px;
+  text-shadow: 1px 1px 1px $black;
 }
 
-.postnav-thumb-next-caption {
-  align-self: center;
-  padding-right: .75rem;
-  padding-bottom: .5rem;
-  text-align: right;
-}
 
 
 /* More link

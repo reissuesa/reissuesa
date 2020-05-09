@@ -95,7 +95,7 @@
 
   &.alignwide,
   &.alignfull {
-    margin-bottom: $gap-big;
+    margin-bottom: 0; // $gap-big;
   }
 
 }

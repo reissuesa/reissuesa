@@ -5,7 +5,7 @@
 .site-footer {
   background: $grey-light;
   padding: 2rem 0;
-  // margin-top: 4rem; // 3rem;
+  margin-top: 4rem; // 3rem;
 
   &__container {
     @include wrap;
@@ -51,7 +51,7 @@
 
 		li {
 			display: block;
-      line-height: 1.78em;
+      //line-height: 1.78em;
 
 			ul,
 			ol {
@@ -71,7 +71,7 @@
 
 		&:hover,
 		&:focus {
-                        text-decoration: underline;
+      text-decoration: underline;
 			// border-bottom: 3px solid $color__interactive;
 		}
 	}
@@ -254,6 +254,7 @@
 .footer-wrapper {
   width: 100%;
   background-color: #1c252a; // #263238;
+  //margin-bottom: 4rem;
 }
 
 .footer-widgets {
@@ -397,3 +398,21 @@ img#reissuesa_etusivu {
 }
 
 
+// tag cloud sidebar
+
+
+.primary-widgets .tagcloud a {
+  color: #777;
+  border: 1px solid #ddd;
+  margin: 0 8px 8px 0;
+  font-size: .625rem; //10px
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 10px 4px;
+  line-height: 3;
+  &:hover {
+    background-color: $primary;
+    color: #fff;
+    text-decoration: none;
+  }
+}

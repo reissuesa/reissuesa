@@ -79,6 +79,9 @@
     .teaser__header__title {
     }
   }
+  .teaser-container.frontpage {
+    @include grid(2);
+  }
 }
 
 @media screen and (min-width: $query__large) {

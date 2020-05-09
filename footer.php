@@ -11,7 +11,16 @@
 
   </div><!-- #content -->
 
-  <?php get_sidebar( 'footer' ); ?>
+  <?php if (! is_front_page()) {
+    get_sidebar( 'footer' );
+    }
+  ?>
+
+  <?php
+    echo '<br><br><br>';
+   echo do_shortcode('[instagram-feed num=5 cols=5 imagepadding=0 showfollow=false]');
+   echo do_shortcode('[instagram-feed num=8 cols=8 imagepadding=0 showfollow=false]');
+  ?>
 
 
   <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -41,11 +50,7 @@
 
   </footer><!-- #colophon -->
 
-  <?php
 
-   // echo do_shortcode('[instagram-feed num=5 cols=5 imagepadding=0 showfollow=false]');
-   // echo do_shortcode('[instagram-feed num=8 cols=8 imagepadding=0 showfollow=false]');
-  ?>
 
 
 </div><!-- #page -->

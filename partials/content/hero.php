@@ -34,7 +34,7 @@ if (is_singular() && get_post_type() === 'post') {
 // background
 $image = '';
 if (is_singular() && has_post_thumbnail()) {
-  $image = reissuesa_get_image(get_post_thumbnail_id(), 'hero', ['lazyload' => 'animated']);
+  $image = reissuesa_get_image(get_post_thumbnail_id(), 'hero', ['lazyload' => 'false']);
 }
 
 if (!empty($image)) {
